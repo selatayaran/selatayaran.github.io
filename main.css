@@ -1,17 +1,19 @@
 /* Reseta a margem e o padding de todos os elementos */
 * {
   margin: 0;
-  padding: 0;
+  padding: 10px;
   box-sizing: border-box;
 }
 
 /* Estilo geral para o corpo */
 body {
-  font-family: Merriweather, sans-serif;
-  display: flex;
+  margin: 0;
+  padding: 0;
+  overflow-y: scroll; /* Ativa o scroll vertical */
+  scroll-snap-type: y mandatory; /* Faz o scroll 'pular' entre as seções */
+  font-family: Merriweather, Roboto monospace;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   text-align: center;
   background-color: #ffffff;
   scroll-behavior: smooth; /* Para rolar suavemente entre as seções */
@@ -23,7 +25,7 @@ body {
   top: 0;
   width: 100%;
   text-align: center;
-  background: rgba(173, 216, 230, 0.7);
+  background: rgba(114, 142, 150, 0.7);
   padding: 10px 0;
   display: none; /* Escondido inicialmente */
   z-index: 1000;
@@ -42,10 +44,6 @@ body {
   font-weight: bold;
 }
 
-.top-menu ul li a:hover {
-  text-decoration: underline;
-}
-
 /* Exibir o menu ao passar o mouse no topo */
 body:hover .top-menu {
   display: block;
@@ -54,6 +52,7 @@ body:hover .top-menu {
 /* Seções do site */
 .section {
   min-height: 100vh;
+  min-width: 100vh;
   padding: 50px 20px;
   display: flex;
   flex-direction: column;
@@ -65,7 +64,7 @@ body:hover .top-menu {
 /* Início (seção principal) */
 #inicio h1 {
   font-size: 2.5rem;
-  color: #333;
+  color: #232B2E;
 }
 
 #inicio p {
@@ -89,7 +88,7 @@ body:hover .top-menu {
   padding: 10px 20px;
   font-size: 1rem;
   color: #fff;
-  background-color: #add8e6;
+  background-color: #728E96;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -97,5 +96,5 @@ body:hover .top-menu {
 }
 
 .language-switcher button:hover {
-  background-color: #add8e6;
+  background-color: #728E96;
 }
