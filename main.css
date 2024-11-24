@@ -59,6 +59,7 @@ body:hover .top-menu {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  color: #232B2E;
   text-align: left;
 }
 /* Início (seção principal) */
@@ -149,6 +150,139 @@ body:hover .top-menu {
     border-right-color: transparent;
   }
 }
+
+/* Seção habilidades */
+/* Container flexível para habilidades técnicas */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+/* Estilo dos cards */
+.skills-card {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  flex: 1 1 calc(50% - 20px); 
+  min-width: 280px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.skills-card:hover {
+  transform: scale(1.05);
+}
+
+/* Estilo das skills */
+.skill {
+  margin-bottom: 20px; /* Espaçamento maior entre as habilidades */
+}
+
+/* Estilo do título de cada habilidade */
+.skills-card h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  font-weight: 600;
+  display: flex;
+  align-items: center; 
+  color: #232B2E;
+}
+
+#habilidades h2 .icon {
+  width: 50px; /* Largura fixa */
+  height: 50px; /* Altura fixa */
+  margin-right: 8px; /* Espaço entre a imagem e o texto */
+  object-fit: contain; /* Mantém a proporção correta da imagem */
+  vertical-align: middle; /* Alinha verticalmente com o texto */
+}
+#habilidades-sociais h2 .icon {
+  width: 50px; /* Largura fixa */
+  height: 50px; /* Altura fixa */
+  margin-right: 8px; /* Espaço entre a imagem e o texto */
+  object-fit: contain; /* Mantém a proporção correta da imagem */
+  vertical-align: middle; /* Alinha verticalmente com o texto */
+}
+
+/* Redefinir tamanho das imagens na seção habilidades */
+.skills-card label .icon {
+  width: 50px; /* Largura fixa */
+  height: 50px; /* Altura fixa */
+  margin-right: 8px; /* Espaço entre a imagem e o texto */
+  object-fit: contain; /* Mantém a proporção correta da imagem */
+  vertical-align: middle; /* Alinha verticalmente com o texto */
+}
+
+/* Redefinir tamanho das imagens na seção habilidades */
+.skills-card h3 .icon {
+  width: 50px; /* Largura fixa */
+  height: 50px; /* Altura fixa */
+  margin-right: 8px; /* Espaço entre a imagem e o texto */
+  object-fit: contain; /* Mantém a proporção correta da imagem */
+  vertical-align: middle; /* Alinha verticalmente com o texto */
+}
+
+/* Barra de progresso */
+.progress-bar {
+  background: #e0e0e0;
+  border-radius: 5px;
+  height: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress {
+  background: #728e96;
+  width: 0;
+  position: relative;
+  z-index: 2;
+  border-radius: 5px;
+  transition: width 0.5s ease-in-out;
+}
+
+/* Percentual */
+.progress:after {
+  content: attr(data-skill) '%';
+  position: absolute;
+  right: 10px;
+  top: 2px;
+  color: #232B2E;
+  font-size: 12px;
+  display: none;
+}
+
+/* Exibição do percentual quando passar o mouse sobre a habilidade */
+.skill:hover .progress {
+  width: var(--skill-width);
+}
+
+.skill:hover .progress:after {
+  display: inline;
+}
+
+/* Responsividade: para telas menores */
+@media (max-width: 768px) {
+  .skills-card {
+    flex: 1 1 calc(50% - 20px); /* Ajusta para 2 colunas em telas menores */
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-card {
+    flex: 1 1 100%; /* Ajusta para 1 coluna em telas muito pequenas */
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-card h3 .icon {
+      width: 16px;
+      height: 16px;
+  }
+}
+
 
 /* Seção Educação */
 #educacao {

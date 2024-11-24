@@ -38,4 +38,20 @@ const texts = {
   window.onload = () => {
     const language = getLanguageFromPage();
     typeEffect(language);
-  };  
+  }; 
+
+  document.addEventListener("scroll", function () {
+    const progressBars = document.querySelectorAll(".progress");
+    progressBars.forEach(bar => {
+        const percentage = bar.dataset.skill; // Recupera o valor do atributo data-skill
+        if (bar.getBoundingClientRect().top < window.innerHeight) {
+            bar.style.width = `${percentage}%`; // Aplica a largura dinamicamente
+        }
+    });
+});
+
+// Configurando os valores percentuais nas barras de progresso
+document.querySelectorAll('.skill').forEach(skill => {
+    const percentage = skill.querySelector('.progress').dataset.skill;
+    skill.querySelector('.progress').style.width = "0%"; // Largura inicial como 0%
+});
