@@ -26,7 +26,7 @@ body {
   width: 100%;
   text-align: center;
   background: rgba(114, 142, 150, 0.7);
-  padding: 10px 0;
+  padding: 0 0;
   display: none; /* Escondido inicialmente */
   z-index: 1000;
 }
@@ -51,35 +51,29 @@ body:hover .top-menu {
 
 /* Seções do site */
 .section {
+  position: relative;
+  z-index: 1; /* Garante que o conteúdo fique acima da imagem de fundo */
   min-height: 100vh;
-  min-width: 100vh;
   padding: 50px 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  text-align: center;
+  align-items: flex-start;
+  text-align: left;
 }
-
 /* Início (seção principal) */
-#inicio h1 {
-  font-size: 2.5rem;
-  color: #232B2E;
-}
 
-#inicio p {
-  font-size: 1.2rem;
+#inicio #typing-effect {
+  font-family: monospace;
+  font-size: 1.5rem;
   color: #666;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #666;
+  animation: blink 0.5s step-end infinite alternate;
 }
 
-.profile-photo {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  margin: 20px 0;
-}
-
-/* Estilo do botão de troca de idioma */
+/* Estilo do botão de idioma */
 .language-switcher {
   margin-top: 20px;
 }
@@ -88,7 +82,7 @@ body:hover .top-menu {
   padding: 10px 20px;
   font-size: 1rem;
   color: #fff;
-  background-color: #728E96;
+  background-color: #728e96;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -96,5 +90,362 @@ body:hover .top-menu {
 }
 
 .language-switcher button:hover {
-  background-color: #728E96;
+  background-color: #506570;
+}
+
+/* Configuração para a imagem de fundo */
+.background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Garante que a imagem fique no fundo */
+  background-image: url('img/capa_site.jpg'); /* Substitua pelo caminho da sua imagem */
+  background-size: cover; /* Faz a imagem ocupar toda a tela */
+  background-position: center; /* Centraliza a imagem */
+  background-repeat: no-repeat; /* Evita repetições da imagem */
+}
+
+/* Ajustes na seção "Sobre" */
+#sobre {
+  display: flex;
+  flex-direction: row; /* Alinha texto e imagem lado a lado */
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px; /* Espaçamento entre os elementos */
+  padding: 50px;
+}
+
+#sobre h2 {
+  font-size: 2rem;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 20px; /* Espaço abaixo do título */
+  color: #232B2E;
+}
+
+#sobre p {
+  font-size: 1rem;
+  flex: 1; /* Ocupa espaço disponível */
+  text-align: justify;
+  line-height: 1.6; /* Melhor espaçamento entre linhas */
+  color: #232B2E;
+}
+
+#sobre img {
+  max-height: 300px;
+  max-width: 300px;
+  border-radius: 50%; /* Torna a imagem circular */
+  object-fit: cover; 
+}
+
+/* Animação do cursor piscante */
+@keyframes blink {
+  from {
+    border-right-color: #666;
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+/* Seção Educação */
+#educacao {
+  padding: 50px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Estilização do título */
+.section-title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  color: #232B2E;
+}
+
+/* Container para os cards */
+.education-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.education-item {
+  flex: 1 1 calc(45% - 20px); /* Ajusta o tamanho dos itens para caber lado a lado */
+  min-width: 250px; /* Evita que fiquem muito pequenos */
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.education-item h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #506570; /* Cor do título */
+}
+
+.education-item p {
+  margin: 5px 0;
+  line-height: 1.2;
+  font-size: 1rem;
+  color: #232B2E;
+}
+
+.education-item p strong {
+  color: #232B2E; /* Destaque dos títulos */
+}
+
+/* Design responsivo */
+@media (max-width: 768px) {
+  .education-container {
+    flex-direction: column; /* Ajusta para uma coluna em telas menores */
+  }
+
+  .education-item {
+    flex: 1 1 100%; /* Cada card ocupa toda a largura */
+  }
+}
+
+/* Linha do tempo */
+.timeline {
+  position: relative;
+  padding: 20px 0;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+/* Linha vertical */
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  background: #ddd;
+  z-index: 0;
+}
+
+/* Item da linha do tempo */
+.timeline-item {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-bottom: 40px;
+}
+
+.timeline-item:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+
+/* Ponto na linha */
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: calc(50% - 7px);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  z-index: 1;
+  transform: translateX(-50%);
+}
+
+/* Data */
+.timeline-date {
+  width: 120px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #232B2E;
+  position: relative;
+  z-index: 2;
+}
+
+/* Conteúdo */
+.timeline-content {
+  background: #fff;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  position: relative;
+  z-index: 2;
+}
+
+.timeline-content h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #506570;
+}
+
+.timeline-content p {
+  margin: 0;
+  font-size: 1rem;
+  color: #232B2E;
+  text-align: justify;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .timeline-item {
+    flex-direction: column;
+  }
+
+  .timeline-date {
+    text-align: left;
+    width: auto;
+    margin-bottom: 10px;
+  }
+
+  .timeline-content {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .timeline-item:nth-child(odd) {
+    flex-direction: column;
+  }
+}
+/* Seção Projetos */
+#projetos {
+  padding: 50px 20px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #232B2E;
+}
+
+/* Grid de projetos */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Card de projeto */
+.project-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Título do artigo */
+.project-card h3 {
+  font-size: 1.1rem;
+  color: #232B2E;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+/* Link do artigo */
+.project-link {
+  padding: 10px 15px;
+  background: #728e96;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.project-link:hover {
+  background: #506570;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Seção Contato */
+#contato {
+  padding: 50px 20px;
+  text-align: left;
+}
+
+#contato h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #232B2E;
+}
+
+/* Botões de Download */
+.download-buttons button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #728e96;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: background-color 0.3s;
+}
+
+.download-buttons button:hover {
+  background-color: #506570;
+}
+
+.contact-buttons {
+  display: flex;
+  flex-direction: row; /* Organiza os botões em linha */
+  gap: 15px; /* Espaçamento uniforme entre os botões */
+  align-items: center; /* Centraliza verticalmente os ícones */
+}
+
+.contact-buttons button {
+  width: 60px; /* Define tamanho do botão */
+  height: 60px;
+  background-color: #728e96;
+  border: none;
+  border-radius: 10px; /* Deixa os botões com bordas arredondadas */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centraliza os ícones no botão */
+  transition: background-color 0.3s;
+}
+
+.contact-buttons button:hover {
+  background-color: #506570;
+}
+
+.contact-image {
+  width: 50px; /* Tamanho do ícone */
+  height: 50px;
+  object-fit: contain; /* Garante que os ícones mantenham proporção */
+}
+
+/* Garantindo espaçamento entre os botões */
+.download-buttons button + button {
+  margin-left: 10px;
 }

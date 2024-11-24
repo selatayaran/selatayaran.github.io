@@ -3,21 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tainá Machado Selayaran</title>
     <link rel="stylesheet" href="main.css">
+    <title>Tainá Machado Selayaran</title>
 </head>
 <body>
-    <!-- Language switcher -->
-    <div class="language-switcher">
-        <button onclick="window.location.href='index.html'">PT</button>
-    </div>
-
+    <!-- Menu no topo que aparece ao passar o mouse -->
+ <nav class="top-menu">
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#professionalexperience">Professional Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contacts">Contacts</a></li>
+    </ul>
+  </nav>
     <!-- Section 1: Home -->
-    <section id="home">
-        <h1>Tainá Machado Selayaran</h1>
-        <img src="photo.jpg" alt="Tainá's photo" class="profile-photo"> <!-- Replace with actual photo path -->
-        <p>For a healthier world through bioinformatics</p>
-    </section>
+    <div class="section" id="inicio">
+        <div class="content-wrapper">
+            <h1>Tainá Machado Selayaran</h1>
+            <p id="typing-effect"></p> <!-- Frase com efeito de digitação -->
+            <div class="language-switcher">
+              <button onclick="window.location.href='index.html'">PT</button>
+            </div>
+          </div>
+          <div class="profile-image">
+            <img src="/img/capa_site.jpg" alt="Bioinformática"> <!-- Substitua pelo caminho da imagem -->
+          </div>
+        </div>
+        <script src="script.js"></script> <!-- Link para o arquivo de JavaScript -->
 
     <!-- Section 2: About -->
     <section id="about">
