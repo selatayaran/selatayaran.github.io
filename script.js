@@ -40,18 +40,22 @@ const texts = {
     typeEffect(language);
   }; 
 
+
+// Função para movimentar as barras
   document.addEventListener("scroll", function () {
     const progressBars = document.querySelectorAll(".progress");
     progressBars.forEach(bar => {
         const percentage = bar.dataset.skill; // Recupera o valor do atributo data-skill
+        const percentageSpan = bar.parentElement.querySelector(".percentage"); // Encontra o <span>
+        
         if (bar.getBoundingClientRect().top < window.innerHeight) {
             bar.style.width = `${percentage}%`; // Aplica a largura dinamicamente
+            percentageSpan.textContent = `${percentage}%`; // Define o texto do percentual
         }
     });
 });
 
-// Configurando os valores percentuais nas barras de progresso
-document.querySelectorAll('.skill').forEach(skill => {
-    const percentage = skill.querySelector('.progress').dataset.skill;
-    skill.querySelector('.progress').style.width = "0%"; // Largura inicial como 0%
+// Inicializando todas as barras com largura 0%
+document.querySelectorAll('.progress').forEach(bar => {
+    bar.style.width = "0%"; // Largura inicial
 });
