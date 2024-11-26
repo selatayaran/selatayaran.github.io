@@ -1,0 +1,201 @@
+{
+    "language": "en",
+    "title": "Tainá Machado Selayaran",
+    "menu": {
+      "inicio": "Home",
+      "sobre": "About",
+      "habilidades": "Skills",
+      "educacao": "Education",
+      "experiencia": "Experience",
+      "projetos": "Projects",
+      "contato": "Contact"
+    },
+    "sections": {
+      "inicio": {
+        "name": "Tainá Machado Selayaran",
+        "typing_effect": "For a healthier world through bioinformatics"
+      },
+
+      "sobre": {
+        "title": "About",
+        "description": [
+          "I have a great passion for technology and science, believing that innovation can transform healthcare and make it more accessible to everyone. Bioinformatics emerged as the perfect opportunity to apply my knowledge and contribute with solutions that can make a difference. I am determined to use technology to solve challenges in the healthcare field and promote significant advances.",
+          "In addition to my dedication to science, I am also a big fan of music. In my leisure time, I enjoy playing the guitar and piano, as I believe that music also has the power to connect and inspire."
+        ],
+        "profile_image_alt": "Tainá's photo"
+        },
+        "educacao": {
+        "title": "Education",
+        "labels": {
+            "course": "Course",
+            "institution": "Institution",
+            "mode": "Mode",
+            "start": "Start",
+            "end": "End"
+        },
+        "items": [
+            {
+            "course": "Biomedical Informatics",
+            "institution": "Federal University of Health Sciences of Porto Alegre (UFCSPA)",
+            "mode": "Bachelor's degree",
+            "start": "2021",
+            "end": "2026 (forecast)"
+            },
+            {
+            "course": "Bioinformatics",
+            "institution": "Polytechnic Institute of Setúbal (IPS) - Barreiro School of Technology",
+            "mode": "Exchange academic",
+            "start": "September 2024",
+            "end": "February 2025"
+            },
+            {
+            "course": "Chemical Technician",
+            "institution": "Federal Institute of Rio Grande do Sul (IFRS) - Caxias do Sul Campus",
+            "mode": "Integrated with high school",
+            "start": "2016",
+            "end": "2019"
+            },
+            {
+            "course": "English",
+            "institution": "College English School - Flores da Cunha",
+            "mode": "Level - B1 (Minimum independent)",
+            "start": "2018",
+            "end": "2021"
+            }
+        ]
+        },
+        "experiencia": {
+            "title": "Professional Experience",
+            "items": [
+                {
+                "date": "2024",
+                "role": "Undergraduate Research Fellow",
+                "description": "Project: 'Respiratory viral infections in Rio Grande do Sul - Genomics,' funded by the National Council for Scientific and Technological Development (CNPq)."
+                },
+                {
+                "date": "2022 - 2024",
+                "role": "Bioinformatics Intern",
+                "description": "Scientific and Technological Development Center (CDCT) at the State Health Surveillance Center (CEVS) of Rio Grande do Sul (RS), working in the Genomics Surveillance and Bioinformatics Unit."
+                },
+                {
+                "date": "2020 - 2022",
+                "role": "Laboratory Assistant",
+                "description": "Conducting physicochemical analyses of beverages at LAVIN Laboratory Ltda."
+                },
+                {
+                "date": "2019",
+                "role": "Laboratory Assistant",
+                "description": "Conducting physicochemical analyses of beverages at Nova Aliança Ltda."
+                }
+            ]
+        },
+        "habilidades": {
+            "title": "Skills",
+            "categories": {
+                "programacao": {
+                    "title": "Programming",
+                    "skills": {
+                        "python": { "name": "Python", "progress": 80 },
+                        "r": { "name": "R", "progress": 80 },
+                        "shell": { "name": "Shell Script", "progress": 70 },
+                        "html": { "name": "HTML", "progress": 40 },
+                        "css": { "name": "CSS3", "progress": 40 },
+                        "c": { "name": "C", "progress": 40 },
+                        "java": { "name": "Java", "progress": 40 }
+
+                    }
+                },
+                "bioinformatica": {
+                    "title": "Bioinformatics",
+                    "skills": {
+                        "itol": { "name": "ITOL", "progress": 75 },
+                        "seamdock": { "name": "SeamDock", "progress": 60 },
+                        "blast": { "name": "BLAST", "progress": 80 },
+                        "tb_profiler": { "name": "TB-profiler", "progress": 90 },
+                        "samtools": { "name": "SAMtools", "progress": 85 },
+                        "vcftools": { "name": "VCFtools", "progress": 85 },
+                        "beast": { "name": "BEAST", "progress": 70 }
+                    }
+                },
+                "database": {
+                    "title": "Databases",
+                    "skills": {
+                        "mysql": { "name": "MySQL", "progress": 80 },
+                        "sql": { "name": "SQL", "progress": 75 }
+                    }
+                },
+                "ferramentas": {
+                    "title": "Tools and Technologies",
+                    "skills": {
+                        "git": { "name": "Git/GitHub", "progress": 90 },
+                        "vscode": { "name": "VS Code", "progress": 90 },
+                        "jira": { "name": "Jira", "progress": 70 }
+                    }
+                },
+                "softskills": {
+                    "title": "Soft Skills",
+                    "skills": {
+                        "teamwork": { "name": "Effective Communication", "progress": 90 },
+                        "communication": { "name": "Problem Solving", "progress": 80 },
+                        "problem_solving": { "name": "Learning Ability", "progress": 90 },
+                        "learning": { "name": "Learning Ability", "progress": 90 },
+                        "adaptability": { "name": "Adaptability", "progress": 70 }
+                    }
+                }
+            }
+        },
+        "projetos": {
+        "title": "Projects and Papers",
+        "items": [
+            {
+            "title": "Simultaneous circulation and coinfection of Dengue clades and serotypes in Southern Brazil",
+            "link": "https://www.biorxiv.org/content/10.1101/2024.02.24.581892v1"
+            },
+            {
+            "title": "Molecular epidemiology of Western equine encephalitis virus in Brazil, 2023-2024",
+            "link": "https://doi.org/10.1101/2024.04.15.24305848"
+            },
+            {
+            "title": "Endemic transmission and international introduction of Monkeypox virus in Southern Brazil between 2022-2023",
+            "link": "https://doi.org/10.1101/2024.06.22.24309232"
+            },
+            {
+            "title": "Development and validation of an all-in-one Bat-Clade genomic sequencing and host identification protocol",
+            "link": "https://doi.org/10.1101/2024.10.31.24316523"
+            },
+            {
+            "title": "Resurgence of human respiratory syncytial virus during COVID-19 pandemic in Southern Brazil",
+            "link": "https://doi.org/10.1002/jmv.29551"
+            }
+        ]
+        },
+        "contato": {
+        "title": "Contact",
+        "buttons": {
+            "linkedin": {
+            "name": "LinkedIn",
+            "link": "https://www.linkedin.com/in/taina-selayaran"
+            },
+            "github": {
+            "name": "GitHub",
+            "link": "https://github.com/selatayaran"
+            },
+            "email": {
+            "name": "Gmail",
+            "link": "mailto:taina.selayaran@gmail.com"
+            },
+            "curriculo": {
+            "name": "Download Resume",
+            "link": "doc/Curriculo_Portugal-PT.pdf"
+            },
+            "carta": {
+            "name": "Download Cover Letter",
+            "link": "doc/Carta_apresentacao.pdf"
+            }
+        }
+        },
+        "footer": {
+        "text": "Designed by Tainá Selayaran"
+        }
+    }
+}

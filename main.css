@@ -152,7 +152,6 @@ body:hover .top-menu {
 }
 
 /* Seção habilidades */
-/* Container flexível para habilidades técnicas */
 .skills-container {
   display: flex;
   flex-wrap: wrap;
@@ -190,38 +189,6 @@ body:hover .top-menu {
   display: flex;
   align-items: center; 
   color: #232B2E;
-}
-
-#habilidades h2 .icon {
-  width: 50px; /* Largura fixa */
-  height: 50px; /* Altura fixa */
-  margin-right: 8px; /* Espaço entre a imagem e o texto */
-  object-fit: contain; /* Mantém a proporção correta da imagem */
-  vertical-align: middle; /* Alinha verticalmente com o texto */
-}
-
-/* Container de habilidades sociais */
-.skills-social-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: space-between;
-  align-items: stretch;
-  padding: 20px;
-}
-
-/* Ajustes específicos para habilidades sociais */
-#habilidades-sociais .skills-card {
-  flex: 1 1 calc(100% - 20px); /* Ocupa 50% da linha menos o gap */
-  min-width: 550px;
-  background: #ffffff; /* Apenas para diferenciar o fundo (opcional) */
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-  #habilidades-sociais .skills-card {
-    flex: 1 1 calc(100% - 20px); /* Ocupa 100% da linha em telas menores */
-  }
 }
 
 /* Redefinir tamanho das imagens na seção habilidades */
@@ -282,15 +249,6 @@ body:hover .top-menu {
 .skill:hover .progress:after {
   display: inline;
 }
-
-#habilidades-sociais h2 .icon {
-  width: 50px; /* Largura fixa */
-  height: 50px; /* Altura fixa */
-  margin-right: 8px; /* Espaço entre a imagem e o texto */
-  object-fit: contain; /* Mantém a proporção correta da imagem */
-  vertical-align: middle; /* Alinha verticalmente com o texto */
-}
-
 
 /* Responsividade: para telas menores */
 @media (max-width: 768px) {
@@ -560,19 +518,6 @@ body:hover .top-menu {
   color: #232B2E;
 }
 
-/* Botões de Download */
-.download-buttons button {
-  padding: 10px 20px;
-  font-size: 1rem;
-  color: #fff;
-  background-color: #728e96;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-bottom: 10px;
-  transition: background-color 0.3s;
-}
-
 .download-buttons button:hover {
   background-color: #506570;
 }
@@ -608,7 +553,7 @@ body:hover .top-menu {
 }
 
 /* Garantindo espaçamento entre os botões */
-.download-buttons button + button {
+.download-buttons button{
   margin-left: 10px;
 }
 

@@ -4,405 +4,78 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="main.css">
-  <title>Tainá Machado Selayaran</title>
+  <title id="page-title"></title>
 </head>
 <body>
  <!-- Menu no topo que aparece ao passar o mouse -->
  <nav class="top-menu">
   <ul>
-      <li><a href="#sobre">Sobre</a></li>
-      <li><a href="#habilidades">Habilidades</a></li>
-      <li><a href="#educacao">Educação</a></li>
-      <li><a href="#experiencia">Experiência</a></li>
-      <li><a href="#projetos">Projetos</a></li>
-      <li><a href="#contato">Contato</a></li>
+      <li><a href="#inicio" id="menu-inicio"></a></li>
+      <li><a href="#sobre" id="menu-sobre"></a></li>
+      <li><a href="#educacao" id="menu-educacao"></a></li>
+      <li><a href="#experiencia" id="menu-experiencia"></a></li>
+      <li><a href="#habilidades" id="menu-habilidades"></a></li>
+      <li><a href="#projetos" id="menu-projetos"></a></li>
+      <li><a href="#contato" id="menu-contato"></a></li>
   </ul>
 </nav>
+
     <div class="background-image"></div>
-        <div class="section" id="inicio">
-            <div class="content-wrapper">
-                <h1>Tainá Machado Selayaran</h1>
-                <p id="typing-effect"></p>
-                <div class="language-switcher">
-                <button onclick="window.location.href='index_english.html'">EN</button>
+
+    <!-- Início -->
+    <div class="section" id="inicio">
+        <div class="content-wrapper">
+            <h1 id="inicio-title"></h1>
+            <p id="typing-effect"></p>
+            <div class="language-switcher">
+                <button onclick="changeLanguage('en')">EN</button>
+                <button onclick="changeLanguage('pt')">PT</button>
             </div>
         </div>
     </div>
 
-    <script src="script.js"></script> 
-  </body>
-  </html>
-
-  <!-- Sobre -->
-  <div class="section" id="sobre">
-    <div>
-      <h2>Sobre</h2>
-      <p>Tenho uma grande paixão por tecnologia e ciência, acreditando que a inovação pode transformar a saúde e torná-la mais acessível a todos. 
-        A bioinformática surgiu como a oportunidade perfeita para aplicar meus conhecimentos e contribuir com soluções que podem fazer a diferença. 
-        Estou determinada a usar a tecnologia para resolver desafios no campo da saúde e promover avanços significativos.
-      </p>
-      <p>Além da minha dedicação à ciência, sou uma grande amante da música. 
-        Nos meus momentos de lazer, gosto de tocar violão e piano, pois acredito que a música também tem o poder de conectar e inspirar.
-      </p>
-    </div>
-    <img src="./img/tai_profile.jpg" alt="Foto de Tainá" class="profile-photo">
-  </div>
-  
-
-  <!-- Habilidades Técnicas-->
-<div class="section" id="habilidades">
-  <h2><img src="img/tecnicskills.png" alt="Programação" class="icon"> Habilidades Técnicas</h2>
-  <div class="skills-container">
-    
-    <!-- Programação -->
-    <div class="skills-card">
-        <h3><img src="img/programacao.png" alt="Programação" class="icon"> Programação</h3>
-        <div class="skill">
-            <label><img src="img/python.png" alt="Python" class="icon"> Python</label>
-            <div class="progress-bar">
-                <div class="progress" data-skill="80"></div>
-                <span class="percentage"></span>
-            </div>
+    <!-- Sobre -->
+    <div class="section" id="sobre">
+        <div>
+            <h2 id="sobre-title"></h2>
+            <p id="sobre-description1"></p>
+            <p id="sobre-description2"></p>
         </div>
-        <div class="skill">
-            <label><img src="img/r.png" alt="R" class="icon"> R</label>
-            <div class="progress-bar">
-                <div class="progress" data-skill="80"></div>
-                <span class="percentage"></span>
-            </div>
-        </div>
-        <div class="skill">
-            <label><img src="img/shell.png" alt="Shell Script" class="icon"> Shell Script</label>
-            <div class="progress-bar">
-                <div class="progress" data-skill="80"></div>
-                <span class="percentage"></span>
-            </div>
-        </div>
-        <div class="skill">
-            <label><img src="img/html.png" alt="HTML" class="icon"> HTML</label>
-            <div class="progress-bar">
-                <div class="progress" data-skill="40"></div>
-                <span class="percentage"></span>
-            </div>
-        </div>
-        <div class="skill">
-            <label><img src="img/css3.png" alt="CSS3" class="icon"> CSS3</label>
-            <div class="progress-bar">
-                <div class="progress" data-skill="40"></div>
-                <span class="percentage"></span>
-            </div>
-        </div>
-        <div class="skill">
-            <label><img src="img/js.png" alt="JavaScript" class="icon"> JavaScript</label>
-            <div class="progress-bar">
-                <div class="progress" data-skill="40"></div>
-                <span class="percentage"></span>
-            </div>
-        </div>
-        <div class="skill">
-            <label><img src="img/c-programming.png" alt="C" class="icon"> C</label>
-            <div class="progress-bar">
-                <div class="progress" data-skill="30"></div>
-                <span class="percentage"></span>
-            </div>
-        </div>
-        <div class="skill">
-            <label><img src="img/java.png" alt="Java" class="icon"> Java</label>
-            <div class="progress-bar">
-                <div class="progress" data-skill="45"></div>
-                <span class="percentage"></span>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Bioinformática -->
-    <div class="skills-card">
-        <h3><img src="img/bioinformatica.png" alt="Bioinformática" class="icon"> Bioinformática</h3>
-        <div class="skill">
-            <label><img src="img/itol.png" alt="ITOL" class="icon"> ITOL</label>
-            <div class="progress-bar">
-                <div class="progress" data-skill="75"></div>
-                <span class="percentage"></span>
-            </div>
-        </div>
-        <div class="skill">
-            <label>SeamDock</label>
-            <div class="progress-bar">
-                <div class="progress" data-skill="60"></div>
-                <span class="percentage"></span>
-            </div>
-        </div>
-        <div class="skill">
-            <label><img src="img/blast.png" alt="blast" class="icon"> BLAST</label>
-            <div class="progress-bar">
-                <div class="progress" data-skill="80"></div>
-                <span class="percentage"></span>
-            </div>
-        </div>
-        <div class="skill">
-            <label><img src="img/tb-profiler.png" alt="tb-profiler" class="icon"> TB-profiler</label>
-            <div class="progress-bar">
-                <div class="progress" data-skill="90"></div>
-                <span class="percentage"></span>
-            </div>
-        </div>
-        <div class="skill">
-            <label>SAMtools</label>
-            <div class="progress-bar">
-                <div class="progress" data-skill="85"></div>
-                <span class="percentage"></span>
-            </div>
-        </div>
-        <div class="skill">
-            <label>VCFtools</label>
-            <div class="progress-bar">
-                <div class="progress" data-skill="85"></div>
-                <span class="percentage"></span>
-            </div>
-        </div>
-        <div class="skill">
-            <label><img src="img/beast.png" alt="beast" class="icon"> BEAST</label>
-            <div class="progress-bar">
-                <div class="progress" data-skill="70"></div>
-                <span class="percentage"></span>
-            </div>
-        </div>
+        <img src="./img/tai_profile.jpg" alt="" id="profile-image" class="profile-photo">
     </div>
 
-    <!-- Banco de Dados -->
-    <div class="skills-card">
-        <h3><img src="img/database.png" alt="Banco de Dados" class="icon"> Banco de Dados</h3>
-        <div class="skill">
-            <label><img src="img/mysql.png" alt="MySQL" class="icon"> MySQL</label>
-            <div class="progress-bar">
-                <div class="progress" data-skill="80"></div>
-                <span class="percentage"></span>
-            </div>
-        </div>
-        <div class="skill">
-            <label><img src="img/sql.png" alt="SQL" class="icon"> SQL</label>
-            <div class="progress-bar">
-                <div class="progress" data-skill="75"></div>
-                <span class="percentage"></span>
-            </div>
-        </div>
+    <!-- Educação -->
+    <div class="section" id="educacao">
+        <h2 class="section-title"></h2>
+        <div class="education-container"></div>
     </div>
 
-    <!-- Ferramentas e Tecnologias -->
-    <div class="skills-card">
-        <h3><img src="img/tecnologia.png" alt="Ferramentas" class="icon"> Ferramentas e Tecnologias</h3>
-        <div class="skill">
-            <label><img src="img/github-mark-white.svg" alt="github" class="icon"> Git/GitHub</label>
-            <div class="progress-bar">
-                <div class="progress" data-skill="90"></div>
-                <span class="percentage"></span>
-            </div>
-        </div>
-        <div class="skill">
-            <label><img src="img/vscode.png" alt="vscode" class="icon"> VS CODE</label>
-            <div class="progress-bar">
-                <div class="progress" data-skill="90"></div>
-                <span class="percentage"></span>
-            </div>
-        </div>
-        <div class="skill">
-            <label><img src="img/jira.png" alt="jira" class="icon"> Jira</label>
-            <div class="progress-bar">
-                <div class="progress" data-skill="70"></div>
-                <span class="percentage"></span>
-            </div>
-        </div>
+    <!-- Experiência -->
+    <div class="section" id="experiencia">
+        <h2 class="section-title"></h2>
+        <div class="timeline"></div>
     </div>
+    <!-- Habilidades  -->
+    <div class="section" id="habilidades">
+        <h2><img src="img/tecnicskills.png" alt="Habilidades Técnicas" class="icon"> Habilidades Técnicas</h2>
+        <div class="skills-container"></div>
+    </div>
+
+    <!-- Seção Projetos -->
+  <div class="section" id="projetos">
+    <h2 class="section-title" id="projetos-title"></h2>
+    <div class="projects-grid"></div>
   </div>
 
- <!-- Habilidades Sociais -->
-<div class="section" id="habilidades-sociais">
-  <h2><img src="img/softskills.png" alt="Habilidades Sociais" class="icon"> Habilidades Sociais</h2>
-  <div class="skills-social-container">
-
-    <!-- Trabalho em equipe -->
-    <div class="skills-card">
-        <div class="skill">
-            <label>Trabalho em equipe</label>
-            <div class="progress-bar">
-                <div class="progress" data-skill="90"></div>
-                <span class="percentage"></span>
-            </div>
-        </div>
-        <div class="skill">
-            <label>Comunicação efetiva</label>
-            <div class="progress-bar">
-                <div class="progress" data-skill="80"></div>
-                <span class="percentage"></span>
-            </div>
-        </div>
-        <div class="skill">
-            <label>Resolução de problemas</label>
-            <div class="progress-bar">
-                <div class="progress" data-skill="90"></div>
-                <span class="percentage"></span>
-            </div>
-        </div>
-        <div class="skill">
-            <label>Capacidade de Aprendizado</label>
-            <div class="progress-bar">
-                <div class="progress" data-skill="90"></div>
-                <span class="percentage"></span>
-            </div>
-        </div>
-        <div class="skill">
-            <label>Adaptabilidade</label>
-            <div class="progress-bar">
-                <div class="progress" data-skill="70"></div>
-                <span class="percentage"></span>
-            </div>
-        </div>
-    </div>
-  </div>
-</div>
-
-  <!-- Educação -->
-<div class="section" id="educacao">
-    <h2 class="section-title">Educação</h2>
-    <div class="education-container">
-      <div class="education-item">
-        <h3>Informática Biomédica</h3>
-        <p><strong>Universidade:</strong> Universidade Federal de Ciências da Saúde de Porto Alegre (UFCSPA)</p>
-        <p><strong>Modalidade:</strong> Bacharelado</p>
-        <p><strong>Início:</strong> 2021</p>
-        <p><strong>Previsão de término:</strong> 2026</p>
-      </div>
-  
-      <div class="education-item">
-        <h3>Bioinformática</h3>
-        <p><strong>Instituto:</strong> Instituto Politécnico de Setúbal (IPS) - Escola Superior de Tecnologia do Barreiro</p>
-        <p><strong>Modalidade:</strong> Mobilidade acadêmica</p>
-        <p><strong>Início:</strong> Setembro de 2024</p>
-        <p><strong>Término:</strong> Fevereiro de 2025</p>
-      </div>
-  
-      <div class="education-item">
-        <h3>Técnico em Química</h3>
-        <p><strong>Instituto:</strong> Instituto Federal do Rio Grande do Sul (IFRS) - Campus Caxias do Sul</p>
-        <p><strong>Modalidade:</strong> Integrado ao ensino médio</p>
-        <p><strong>Início:</strong> 2016</p>
-        <p><strong>Término:</strong> 2019</p>
-      </div>
-  
-      <div class="education-item">
-        <h3>Inglês</h3>
-        <p><strong>Instituição:</strong> College English School - Flores da Cunha</p>
-        <p><strong>Nível:</strong> B1 (Independente mínimo)</p>
-        <p><strong>Início:</strong> 2018</p>
-        <p><strong>Término:</strong> 2021</p>
-      </div>
-    </div>
-  </div>  
-
-  <!-- Experiência -->
-<div class="section" id="experiencia">
-    <h2 class="section-title">Experiência Profissional</h2>
-    <div class="timeline">
-      <div class="timeline-item">
-        <div class="timeline-date">2024</div>
-        <div class="timeline-content">
-          <h3>Bolsista de Iniciação Científica</h3>
-          <p>
-            Projeto: “Infecções respiratórias virais no Rio Grande do Sul - Genômica”,
-            financiado pelo Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq).
-          </p>
-        </div>
-      </div>
-  
-      <div class="timeline-item">
-        <div class="timeline-date">2022 - 2024</div>
-        <div class="timeline-content">
-          <h3>Estagiária de Bioinformática</h3>
-          <p>
-            Centro de Desenvolvimento Científico e Tecnológico (CDCT) do 
-            Centro Estadual de Vigilância em Saúde (CEVS) do Rio Grande do Sul 
-            (RS) atuando dentro do Núcleo de Bioinformática e Vigilância Genômica.
-          </p>
-        </div>
-      </div>
-  
-      <div class="timeline-item">
-        <div class="timeline-date">2020 - 2022</div>
-        <div class="timeline-content">
-          <h3>Auxiliar de Laboratório</h3>
-          <p>Desenvolvendo análises físico-químico em bebidas no Laboratório LAVIN Ltda.</p>
-        </div>
-      </div>
-  
-      <div class="timeline-item">
-        <div class="timeline-date">2019</div>
-        <div class="timeline-content">
-          <h3>Auxiliar de Laboratório</h3>
-          <p>Desenvolvendo análises físico-químico em bebidas na Nova Aliança Ltda.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-<!-- Seção Projetos -->
-<div class="section" id="projetos">
-    <h2 class="section-title">Projetos e Artigos</h2>
-    <div class="projects-grid">
-      <!-- Artigo 1 -->
-      <div class="project-card">
-        <h3>Simultaneous circulation and coinfection of Dengue clades and serotypes in Southern Brazil</h3>
-        <a href="https://www.biorxiv.org/content/10.1101/2024.02.24.581892v1" class="project-link" target="_blank">Ver Artigo</a>
-      </div>
-  
-      <!-- Artigo 2 -->
-      <div class="project-card">
-        <h3>Molecular epidemiology of Western equine encephalitis virus in Brazil, 2023-2024</h3>
-        <a href="https://doi.org/10.1101/2024.04.15.24305848" class="project-link" target="_blank">Ver Artigo</a>
-      </div>
-  
-      <!-- Artigo 3 -->
-      <div class="project-card">
-        <h3>Endemic transmission and international introduction of Monkeypox virus in Southern Brazil between 2022-2023</h3>
-        <a href="https://doi.org/10.1101/2024.06.22.24309232" class="project-link" target="_blank">Ver Artigo</a>
-      </div>
-  
-      <!-- Artigo 4 -->
-      <div class="project-card">
-        <h3>Development and validation of an all-in-one Bat-Clade genomic sequencing and host identification protocol</h3>
-        <a href="https://doi.org/10.1101/2024.10.31.24316523" class="project-link" target="_blank">Ver Artigo</a>
-      </div>
-  
-      <!-- Artigo 5 -->
-      <div class="project-card">
-        <h3>Resurgence of human respiratory syncytial virus during COVID-19 pandemic in Southern Brazil</h3>
-        <a href="https://doi.org/10.1002/jmv.29551" class="project-link" target="_blank">Ver Artigo</a>
-      </div>
-    </div>
+  <!-- Seção Contato -->
+  <div class="section" id="contato">
+    <h2 id="contato-title"></h2>
+    <div class="contact-buttons"></div>
   </div>
 
-<!-- Contato -->
-<div class="section" id="contato">
-    <h2>Contato</h2>
-    <div class="contact-buttons">
-        <button onclick="window.open('https://www.linkedin.com/in/taina-selayaran', '_blank')">
-          <img src="img/LI-In-Bug.png" alt="LinkedIn" class="contact-image">
-        </button>
-        <button onclick="window.open('https://github.com/selatayaran', '_blank')">
-          <img src="img/github-mark-white.svg" alt="GitHub" class="contact-image">
-        </button>
-        <button onclick="window.location.href='mailto:taina.selayaran@gmail.com'">
-          <img src="img/icons8-gmail-novo.svg" alt="Gmail" class="contact-image">
-        </button>
-      </div>          
-  
-    <div class="download-buttons">
-      <!-- Botões de Download -->
-      <button onclick="window.open('doc/Curriculo_Portugal-PT.pdf')">Baixar Currículo</button>
-      <button onclick="window.open('doc/Carta_apresentacao.pdf')">Baixar Carta de Apresentação</button>
-    </div>
-  </div> 
   <footer class="footer">
-    <p>Criado por Tainá Selayaran</p>
+    <p id="footer-text"></p>
   </footer>
+    <script src="script.js"></script> 
 </body>
 </html>

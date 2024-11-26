@@ -1,0 +1,199 @@
+{
+    "language": "pt",
+    "title": "Tainá Machado Selayaran",
+    "menu": {
+      "inicio": "Início",
+      "sobre": "Sobre",
+      "habilidades": "Habilidades",
+      "educacao": "Educação",
+      "experiencia": "Experiência",
+      "projetos": "Projetos",
+      "contato": "Contato"
+    },
+    "sections": {
+      "inicio": {
+        "name": "Tainá Machado Selayaran",
+        "typing_effect": "Por um mundo mais saudável através da bioinformática"
+      },
+      "sobre": {
+        "title": "Sobre",
+        "description": [
+          "Tenho uma grande paixão por tecnologia e ciência, acreditando que a inovação pode transformar a saúde e torná-la mais acessível a todos. A bioinformática surgiu como a oportunidade perfeita para aplicar meus conhecimentos e contribuir com soluções que podem fazer a diferença. Estou determinada a usar a tecnologia para resolver desafios no campo da saúde e promover avanços significativos.",
+          "Além da minha dedicação à ciência, sou uma grande amante da música. Nos meus momentos de lazer, gosto de tocar violão e piano, pois acredito que a música também tem o poder de conectar e inspirar."
+        ],
+        "profile_image_alt": "Foto de Tainá"
+      },
+      "educacao": {
+        "title": "Educação",
+        "labels": {
+          "course": "Curso",
+          "institution": "Instituição",
+          "mode": "Modo",
+          "start": "Início",
+          "end": "Término"
+        },
+        "items": [
+          {
+            "course": "Informática Biomédica",
+            "institution": "Universidade Federal de Ciências da Saúde de Porto Alegre (UFCSPA)",
+            "mode": "Bacharelado",
+            "start": "2021",
+            "end": "2026 (previsão)"
+          },
+          {
+            "course": "Bioinformática",
+            "institution": "Instituto Politécnico de Setúbal (IPS) - Escola Superior de Tecnologia do Barreiro",
+            "mode": "Mobilidade acadêmica",
+            "start": "Setembro de 2024",
+            "end": "Fevereiro de 2025"
+          },
+          {
+            "course": "Técnico em Química",
+            "institution": "Instituto Federal do Rio Grande do Sul (IFRS) - Campus Caxias do Sul",
+            "mode": "Integrado ao ensino médio",
+            "start": "2016",
+            "end": "2019"
+          },
+          {
+            "course": "Inglês",
+            "institution": "College English School - Flores da Cunha",
+            "mode": "Nível - B1 (Independente mínimo)",
+            "start": "2018",
+            "end": "2021"
+          }
+        ]
+      },
+      "experiencia": {
+        "title": "Experiência Profissional",
+        "items": [
+          {
+            "date": "2024",
+            "role": "Bolsista de Iniciação Científica",
+            "description": "Projeto: “Infecções respiratórias virais no Rio Grande do Sul - Genômica”, financiado pelo Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq)."
+          },
+          {
+            "date": "2022 - 2024",
+            "role": "Estagiária de Bioinformática",
+            "description": "Centro de Desenvolvimento Científico e Tecnológico (CDCT) do Centro Estadual de Vigilância em Saúde (CEVS) do Rio Grande do Sul (RS) atuando dentro do Núcleo de Bioinformática e Vigilância Genômica."
+          },
+          {
+            "date": "2020 - 2022",
+            "role": "Auxiliar de Laboratório",
+            "description": "Desenvolvendo análises físico-químico em bebidas no Laboratório LAVIN Ltda."
+          },
+          {
+            "date": "2019",
+            "role": "Auxiliar de Laboratório",
+            "description": "Desenvolvendo análises físico-químico em bebidas na Nova Aliança Ltda."
+          }
+        ]
+      },
+      "habilidades": {
+        "title": "Habilidades",
+        "categories": {
+          "programacao": {
+            "title": "Programação",
+            "skills": {
+              "python": { "name": "Python", "progress": 80 },
+              "r": { "name": "R", "progress": 80 },
+              "shell": { "name": "Shell Script", "progress": 70 },
+              "html": { "name": "HTML", "progress": 40 },
+              "css": { "name": "CSS3", "progress": 40 },
+              "c": { "name": "C", "progress": 40 },
+              "java": { "name": "Java", "progress": 40 }
+            }
+          },
+          "bioinformatica": {
+            "title": "Bioinformática",
+            "skills": {
+              "itol": { "name": "ITOL", "progress": 75 },
+              "seamdock": { "name": "SeamDock", "progress": 60 },
+              "blast": { "name": "BLAST", "progress": 80 },
+              "tb_profiler": { "name": "TB-profiler", "progress": 90 },
+              "samtools": { "name": "SAMtools", "progress": 85 },
+              "vcftools": { "name": "VCFtools", "progress": 85 },
+              "beast": { "name": "BEAST", "progress": 70 }
+            }
+          },
+          "database": {
+            "title": "Banco de Dados",
+            "skills": {
+              "mysql": { "name": "MySQL", "progress": 80 },
+              "sql": { "name": "SQL", "progress": 75 }
+            }
+          },
+          "ferramentas": {
+            "title": "Ferramentas e Tecnologias",
+            "skills": {
+              "git": { "name": "Git/GitHub", "progress": 90 },
+              "vscode": { "name": "VS Code", "progress": 90 },
+              "jira": { "name": "Jira", "progress": 70 }
+            }
+          },
+          "softskills": {
+            "title": "Habilidades Sociais",
+            "skills": {
+              "teamwork": { "name": "Trabalho em equipe", "progress": 90 },
+              "communication": { "name": "Comunicação efetiva", "progress": 80 },
+              "problem_solving": { "name": "Resolução de problemas", "progress": 90 },
+              "learning": { "name": "Capacidade de Aprendizado", "progress": 90 },
+              "adaptability": { "name": "Adaptabilidade", "progress": 70 }
+            }
+          }
+        }
+      },
+      "projetos": {
+        "title": "Projetos e Artigos",
+        "items": [
+          {
+            "title": "Simultaneous circulation and coinfection of Dengue clades and serotypes in Southern Brazil",
+            "link": "https://www.biorxiv.org/content/10.1101/2024.02.24.581892v1"
+          },
+          {
+            "title": "Molecular epidemiology of Western equine encephalitis virus in Brazil, 2023-2024",
+            "link": "https://doi.org/10.1101/2024.04.15.24305848"
+          },
+          {
+            "title": "Endemic transmission and international introduction of Monkeypox virus in Southern Brazil between 2022-2023",
+            "link": "https://doi.org/10.1101/2024.06.22.24309232"
+          },
+          {
+            "title": "Development and validation of an all-in-one Bat-Clade genomic sequencing and host identification protocol",
+            "link": "https://doi.org/10.1101/2024.10.31.24316523"
+          },
+          {
+            "title": "Resurgence of human respiratory syncytial virus during COVID-19 pandemic in Southern Brazil",
+            "link": "https://doi.org/10.1002/jmv.29551"
+          }
+        ]
+      },
+      "contato": {
+      "title": "Contato",
+      "buttons": {
+        "linkedin": {
+          "name": "LinkedIn",
+          "link": "https://www.linkedin.com/in/taina-selayaran"
+        },
+        "github": {
+          "name": "GitHub",
+          "link": "https://github.com/selatayaran"
+        },
+        "email": {
+          "name": "Gmail",
+          "link": "mailto:taina.selayaran@gmail.com"
+        },
+        "curriculo": {
+          "name": "Baixar Currículo",
+          "link": "doc/Curriculo_Portugal-PT.pdf"
+        },
+        "carta": {
+          "name": "Baixar Carta de Apresentação",
+          "link": "doc/Carta_apresentacao.pdf"
+        }
+      }
+    },
+      "footer": {
+        "text": "Criado por Tainá Selayaran"
+      }
+    }
+  }  
