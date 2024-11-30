@@ -20,7 +20,7 @@
         "title": "About",
         "description": [
           "I have a great passion for technology and science, believing that innovation can transform healthcare and make it more accessible to everyone. Bioinformatics emerged as the perfect opportunity to apply my knowledge and contribute with solutions that can make a difference. I am determined to use technology to solve challenges in the healthcare field and promote significant advances.",
-          "In addition to my dedication to science, I am also a big fan of music. In my leisure time, I enjoy playing the guitar and piano, as I believe that music also has the power to connect and inspire."
+          "Beyond my dedication to science, I am a great lover of music. In my leisure time, I enjoy playing the guitar and piano, as I believe music also has the power to connect and inspire. My experience studying music has helped me develop certain skills, as learning an instrument requires discipline and resilience—it demands time and practice. This was very helpful during my early studies in programming."
         ],
         "profile_image_alt": "Tainá's photo"
         },
@@ -90,56 +90,45 @@
             ]
         },
         "habilidades": {
-            "title": "Skills",
+            "title": "Hard Skills",
             "categories": {
                 "programacao": {
                     "title": "Programming",
                     "skills": {
-                        "python": { "name": "Python", "progress": 80 },
-                        "r": { "name": "R", "progress": 80 },
-                        "shell": { "name": "Shell Script", "progress": 70 },
-                        "html": { "name": "HTML", "progress": 40 },
-                        "css": { "name": "CSS3", "progress": 40 },
-                        "c": { "name": "C", "progress": 40 },
-                        "java": { "name": "Java", "progress": 40 }
-
+                        "python": { "name": "Python", "progress": 80, "icon": "img/python.png" },
+                        "r": { "name": "R", "progress": 80, "icon": "img/r.png" },
+                        "shell": { "name": "Shell Script", "progress": 70, "icon": "img/shell.png" },
+                        "html": { "name": "HTML", "progress": 40, "icon": "img/html.png" },
+                        "css": { "name": "CSS3", "progress": 40, "icon": "img/css3.png" },
+                        "c": { "name": "C", "progress": 40, "icon": "img/c.png" },
+                        "java": { "name": "Java", "progress": 40, "icon": "img/java.png" }
                     }
                 },
                 "bioinformatica": {
                     "title": "Bioinformatics",
                     "skills": {
-                        "itol": { "name": "ITOL", "progress": 75 },
-                        "seamdock": { "name": "SeamDock", "progress": 60 },
-                        "blast": { "name": "BLAST", "progress": 80 },
-                        "tb_profiler": { "name": "TB-profiler", "progress": 90 },
-                        "samtools": { "name": "SAMtools", "progress": 85 },
-                        "vcftools": { "name": "VCFtools", "progress": 85 },
-                        "beast": { "name": "BEAST", "progress": 70 }
+                        "itol": { "name": "ITOL", "progress": 75, "icon": "img/itol.png" },
+                        "seamdock": { "name": "SeamDock", "progress": 60, "icon": "img/seamdock.png" },
+                        "blast": { "name": "BLAST", "progress": 80, "icon": "img/blast.png" },
+                        "tb_profiler": { "name": "TB-profiler", "progress": 90, "icon": "img/tb-profiler.png" },
+                        "samtools": { "name": "SAMtools", "progress": 85, "icon": "img/github_preto.png" },
+                        "vcftools": { "name": "VCFtools", "progress": 85, "icon": "img/github_preto.png" },
+                        "beast": { "name": "BEAST", "progress": 70, "icon": "img/beast.png" }
                     }
                 },
                 "database": {
                     "title": "Databases",
                     "skills": {
-                        "mysql": { "name": "MySQL", "progress": 80 },
-                        "sql": { "name": "SQL", "progress": 75 }
+                        "mysql": { "name": "MySQL", "progress": 80, "icon": "img/mysql.png" },
+                        "sql": { "name": "SQL", "progress": 75, "icon": "img/sql.png" }
                     }
                 },
                 "ferramentas": {
                     "title": "Tools and Technologies",
                     "skills": {
-                        "git": { "name": "Git/GitHub", "progress": 90 },
-                        "vscode": { "name": "VS Code", "progress": 90 },
-                        "jira": { "name": "Jira", "progress": 70 }
-                    }
-                },
-                "softskills": {
-                    "title": "Soft Skills",
-                    "skills": {
-                        "teamwork": { "name": "Effective Communication", "progress": 90 },
-                        "communication": { "name": "Problem Solving", "progress": 80 },
-                        "problem_solving": { "name": "Learning Ability", "progress": 90 },
-                        "learning": { "name": "Learning Ability", "progress": 90 },
-                        "adaptability": { "name": "Adaptability", "progress": 70 }
+                        "git": { "name": "Git/GitHub", "progress": 90, "icon": "img/github_preto.png" },
+                        "vscode": { "name": "VS Code", "progress": 90, "icon": "img/vscode.png" },
+                        "jira": { "name": "Jira", "progress": 70, "icon": "img/jira.png" }
                     }
                 }
             }
@@ -170,30 +159,18 @@
         ]
         },
         "contato": {
-        "title": "Contact",
-        "buttons": {
-            "linkedin": {
-            "name": "LinkedIn",
-            "link": "https://www.linkedin.com/in/taina-selayaran"
-            },
-            "github": {
-            "name": "GitHub",
-            "link": "https://github.com/selatayaran"
-            },
-            "email": {
-            "name": "Gmail",
-            "link": "mailto:taina.selayaran@gmail.com"
-            },
-            "curriculo": {
-            "name": "Download Resume",
-            "link": "doc/Curriculo_Portugal-PT.pdf"
-            },
-            "carta": {
-            "name": "Download Cover Letter",
-            "link": "doc/Carta_apresentacao.pdf"
+            "title": "Contact",
+            "download": {
+                "curriculo": {
+                "name": "Download Resume",
+                "link": "doc/Curriculo_Portugal-PT.pdf"
+                },
+                "carta": {
+                "name": "Download Cover Letter",
+                "link": "doc/Carta_apresentacao.pdf"
+                }
             }
-        }
-        },
+         },
         "footer": {
         "text": "Designed by Tainá Selayaran"
         }
