@@ -1,6 +1,7 @@
-// 1. Variáveis Globais
+// Variáveis Globais
 let currentLanguage = 'pt'; // Definido como português inicialmente
 let languages = {}; // Vai armazenar as traduções carregadas
+let typingInterval = null;
 
 // Função para carregar o arquivo JSON correspondente
 async function loadLanguage(language) {
@@ -17,19 +18,6 @@ async function loadLanguage(language) {
     }
 }
 
-// Carregar o idioma padrão (Português)
-loadLanguage('pt');
-
-// Função para mudar o idioma
-function changeLanguage(language) {
-    if (!languages[language]) {
-        loadLanguage(language); // Carrega o idioma se ainda não foi carregado
-    } else {
-        currentLanguage = language;
-        updateContent(); // Atualiza o conteúdo imediatamente se o idioma já estiver carregado
-    }
-}
-
 // Função de efeito de digitação
 function typeEffect() {
     const langData = languages[currentLanguage];
@@ -39,19 +27,59 @@ function typeEffect() {
     const typingElement = document.getElementById("typing-effect");
     let index = 0;
 
-    function type() {
+    // Limpa qualquer intervalo anterior
+    if (typingInterval) clearInterval(typingInterval);
+
+    // Define um novo intervalo para o efeito de digitação
+    typingInterval = setInterval(() => {
         if (typingElement) {
             typingElement.innerText = text.substring(0, index + 1);
             index++;
-            if (index < text.length) {
-                setTimeout(type, 100);
-            } else {
-                index = 0;
-                setTimeout(type, 1000);
+
+            // Reinicia o texto ao final
+            if (index >= text.length) {
+                clearInterval(typingInterval); // Pausa ao terminar
+                setTimeout(() => {
+                    index = 0; // Reseta o índice
+                    typeEffect(); // Reinicia o efeito
+                }, 1000); // Espera 1 segundo antes de reiniciar
             }
         }
+    }, 100); // Velocidade de digitação
+}
+
+// Configurar botões de download dinamicamente
+function updateDownloadButtons() {
+    const langData = languages[currentLanguage];
+    const downloadSection = document.querySelector(".contact-download");
+
+    if (!langData.sections.contato.download || !downloadSection) return;
+
+    // Limpa todos os botões existentes na seção
+    downloadSection.innerHTML = '';
+
+    // Adiciona os botões traduzidos
+    const downloadItems = Object.values(langData.sections.contato.download);
+    downloadItems.forEach(item => {
+        const button = document.createElement('button');
+        button.innerText = item.name; // Nome traduzido
+        button.onclick = () => window.open(item.link, "_blank"); // Link correspondente
+        downloadSection.appendChild(button);
+    });
+}
+
+
+// Carregar o idioma padrão (Português)
+loadLanguage('pt');
+
+// Função para trocar idioma e reiniciar o efeito de digitação
+function changeLanguage(language) {
+    if (!languages[language]) {
+        loadLanguage(language); // Carrega o idioma se ainda não foi carregado
+    } else {
+        currentLanguage = language;
+        updateContent(); // Atualiza o conteúdo imediatamente
     }
-    type();
 }
 
 function populateSkills(habilidades) {
@@ -109,7 +137,7 @@ function populateSkills(habilidades) {
 
                     const progress = document.createElement('div');
                     progress.className = 'progress';
-                    progress.style.width = `${skill.progress}%`;
+                    progress.dataset.skill = skill.progress;
                     progressBar.appendChild(progress);
 
                     skillDetails.appendChild(progressBar);
@@ -122,7 +150,28 @@ function populateSkills(habilidades) {
             section.appendChild(card);
         }
     }
+
+    // Adiciona a função de movimentar as barras após carregar o conteúdo
+    setupProgressBars();
 }
+
+// Função para movimentar as barras
+function setupProgressBars() {
+    document.addEventListener("scroll", function () {
+        const progressBars = document.querySelectorAll(".progress");
+        progressBars.forEach(bar => {
+            const percentage = bar.dataset.skill; // Recupera o valor do atributo data-skill
+            if (bar.getBoundingClientRect().top < window.innerHeight) {
+                bar.style.width = `${percentage}%`; // Aplica a largura dinamicamente
+            }
+        });
+    });
+};
+
+// Inicializando todas as barras com largura 0%
+document.querySelectorAll('.progress').forEach(bar => {
+    bar.style.width = "0%"; // Largura inicial
+});
 
 function updateContent() {
     const langData = languages[currentLanguage];
@@ -216,39 +265,35 @@ function updateContent() {
             const projetosTitle = projetosSection.querySelector('.section-title');
             const projectsGrid = projetosSection.querySelector('.projects-grid');
 
+            // Atualiza o título da seção
             if (projetosTitle) projetosTitle.textContent = langData.sections.projetos.title;
+
+            // Atualiza os itens na grade (projetos ou artigos)
             if (projectsGrid) {
-                projectsGrid.innerHTML = '';
-                langData.sections.projetos.items.forEach(item => {
+                projectsGrid.innerHTML = ''; // Limpa o conteúdo atual da grade
+
+                langData.sections.projetos.itens.forEach(item => {
+                    // Cria o cartão do projeto ou artigo
                     const projectCard = document.createElement('div');
                     projectCard.classList.add('project-card');
+
+                    // Define o conteúdo do cartão
                     projectCard.innerHTML = `
                         <h3>${item.title}</h3>
-                        <a href="${item.link}" class="project-link" target="_blank">Ver Artigo</a>
+                        <a href="${item.link}" class="project-link" target="_blank">${langData.sections.projetos.botton}</a>
                     `;
+
+                    // Adiciona o cartão na grade
                     projectsGrid.appendChild(projectCard);
                 });
             }
         }
 
+
         // Seção contatos
         document.getElementById("contato-title").textContent = langData.sections.contato.title;
 
-        // Configurar botões de download dinamicamente
-        const downloadSection = document.querySelector(".contact-download");
-        if (langData.sections.contato.download) { 
-            const downloadItems = Object.values(langData.sections.contato.download); 
-            downloadItems.forEach((item) => {
-                if (downloadSection && downloadSection.children.length === 0) {
-                    downloadItems.forEach((item) => {
-                        const button = document.createElement('button');
-                        button.innerText = item.name;
-                        button.onclick = () => window.open(item.link, "_blank");
-                        downloadSection.appendChild(button);
-                    });
-                }                
-            });
-        }
+        updateDownloadButtons();
 
         // Rodapé
         document.getElementById("footer-text").innerText = langData.sections.footer.text; 

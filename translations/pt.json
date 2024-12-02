@@ -134,7 +134,8 @@
       },
       "projetos": {
         "title": "Projetos e Artigos",
-        "items": [
+        "botton": "Ver",
+        "itens": [
           {
             "title": "Simultaneous circulation and coinfection of Dengue clades and serotypes in Southern Brazil",
             "link": "https://www.biorxiv.org/content/10.1101/2024.02.24.581892v1"

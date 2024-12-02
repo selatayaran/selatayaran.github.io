@@ -319,6 +319,9 @@ body:hover .top-menu {
 #habilidades {
   padding: 70px;
   display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
 }
 
 #habilidades h2 {
@@ -328,9 +331,9 @@ body:hover .top-menu {
 }
 
 #habilidades h2 img {
-  width: 50px; /* Tamanho do ícone */
+  width: 50px;
   height: 50px;
-  object-fit: contain; /* Garante que os ícones mantenham proporção */
+  object-fit: contain;
 }
 
 /* Cartões de Categoria */
@@ -338,39 +341,44 @@ body:hover .top-menu {
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 20px;
-  margin: 20px auto;
-  max-width: 800px;
   background: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  transition: transform 0.2s ease-in-out;
 }
 
 .skill-card h3 {
   text-align: center;
   font-size: 1.5em;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   color: #232B2E;
 }
 
 /* Container de Habilidades */
 .skills-container {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
 }
 
 /* Itens de Habilidades */
 .skill-item {
+  flex: 1 1 calc(50% - 20px); /* Ajusta o tamanho dos itens para caber lado a lado */
+  min-width: 250px; /* Evita que fiquem muito pequenos */
   display: flex;
   align-items: center;
-  gap: 20px;
-  width: calc(50% - 20px); /* Duas colunas */
-  margin-bottom: 20px;
+  gap: 15px;
+  width: 100%;
 }
 
 .skill-icon {
-  width: 50px;
-  height:  50px;
+  width: 40px;
+  height: 40px;
   border-radius: 5px;
   padding: 5px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
@@ -396,13 +404,19 @@ body:hover .top-menu {
   background: #eee;
   border-radius: 5px;
   overflow: hidden;
+  position: relative;
 }
 
 .progress {
   height: 100%;
+  width: 0;
   background: linear-gradient(90deg, #506570, #ADD8E6);
+  position: relative;
+  z-index: 2;
+  border-radius: 5px;
   transition: width 0.5s ease-in-out;
 }
+
 /* Seção Projetos */
 #projetos {
   padding: 70px 70px;
@@ -439,7 +453,6 @@ body:hover .top-menu {
 
 .project-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 /* Título do artigo */

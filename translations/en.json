@@ -134,29 +134,30 @@
             }
         },
         "projetos": {
-        "title": "Projects and Papers",
-        "items": [
-            {
-            "title": "Simultaneous circulation and coinfection of Dengue clades and serotypes in Southern Brazil",
-            "link": "https://www.biorxiv.org/content/10.1101/2024.02.24.581892v1"
-            },
-            {
-            "title": "Molecular epidemiology of Western equine encephalitis virus in Brazil, 2023-2024",
-            "link": "https://doi.org/10.1101/2024.04.15.24305848"
-            },
-            {
-            "title": "Endemic transmission and international introduction of Monkeypox virus in Southern Brazil between 2022-2023",
-            "link": "https://doi.org/10.1101/2024.06.22.24309232"
-            },
-            {
-            "title": "Development and validation of an all-in-one Bat-Clade genomic sequencing and host identification protocol",
-            "link": "https://doi.org/10.1101/2024.10.31.24316523"
-            },
-            {
-            "title": "Resurgence of human respiratory syncytial virus during COVID-19 pandemic in Southern Brazil",
-            "link": "https://doi.org/10.1002/jmv.29551"
-            }
-        ]
+            "title": "Projects and Papers",
+            "botton": "See",
+            "itens": [
+                {
+                    "title": "Simultaneous circulation and coinfection of Dengue clades and serotypes in Southern Brazil",
+                    "link": "https://www.biorxiv.org/content/10.1101/2024.02.24.581892v1"
+                },
+                {
+                    "title": "Molecular epidemiology of Western equine encephalitis virus in Brazil, 2023-2024",
+                    "link": "https://doi.org/10.1101/2024.04.15.24305848"
+                },
+                {
+                    "title": "Endemic transmission and international introduction of Monkeypox virus in Southern Brazil between 2022-2023",
+                    "link": "https://doi.org/10.1101/2024.06.22.24309232"
+                },
+                {
+                    "title": "Development and validation of an all-in-one Bat-Clade genomic sequencing and host identification protocol",
+                    "link": "https://doi.org/10.1101/2024.10.31.24316523"
+                },
+                {
+                    "title": "Resurgence of human respiratory syncytial virus during COVID-19 pandemic in Southern Brazil",
+                    "link": "https://doi.org/10.1002/jmv.29551"
+                }
+             ]
         },
         "contato": {
             "title": "Contact",
