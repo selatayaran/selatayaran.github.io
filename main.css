@@ -136,7 +136,6 @@ body:hover .top-menu {
 #sobre img {
   max-height: 300px;
   max-width: 300px;
-  border-radius: 50%; /* Torna a imagem circular */
   object-fit: cover; 
 }
 

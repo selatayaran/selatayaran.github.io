@@ -1,3 +1,4 @@
+// 1. Variáveis Globais
 let currentLanguage = 'pt'; // Definido como português inicialmente
 let languages = {}; // Vai armazenar as traduções carregadas
 
@@ -238,10 +239,14 @@ function updateContent() {
         if (langData.sections.contato.download) { 
             const downloadItems = Object.values(langData.sections.contato.download); 
             downloadItems.forEach((item) => {
-                const button = document.createElement("button");
-                button.innerText = item.name;
-                button.onclick = () => window.open(item.link, "_blank");
-                downloadSection.appendChild(button);
+                if (downloadSection && downloadSection.children.length === 0) {
+                    downloadItems.forEach((item) => {
+                        const button = document.createElement('button');
+                        button.innerText = item.name;
+                        button.onclick = () => window.open(item.link, "_blank");
+                        downloadSection.appendChild(button);
+                    });
+                }                
             });
         }
 
