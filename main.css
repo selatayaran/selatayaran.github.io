@@ -72,12 +72,36 @@ body:hover .top-menu {
     text-align: center;
     background: rgba(114, 142, 150, 0.7);
     padding: 0;
-    display: flex; /* Torna visível e responsivo */
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens se movam para a linha seguinte */
+    justify-content: center; /* Centraliza os itens */
     z-index: 1000;
   }
 
+  .menu-items {
+    display: flex;
+    flex-direction: column; /* Alinha os itens em coluna */
+    width: 100%; /* Garante que os itens ocupem toda a largura disponível */
+    overflow-x: auto; /* Adiciona rolagem horizontal se necessário */
+  }
+
   .menu-items li {
-      margin: 5px 0;
+    margin: 5px 0;
+    text-align: center; /* Centraliza o texto dos itens */
+  }
+
+  /* Adiciona um estilo para os itens do menu para caberem melhor na tela */
+  .menu-items li a {
+    display: inline-block;
+    padding: 5px 10px; /* Ajuste o padding conforme necessário */
+    text-decoration: none;
+    color: #000; /* Cor do texto */
+    border-radius: 5px; /* Adiciona bordas arredondadas */
+    transition: background 0.3s ease;
+  }
+
+  .menu-items li a:hover {
+    background: rgba(150, 150, 150, 0.5); /* Cor de fundo ao passar o mouse */
   }
 }
 
@@ -138,6 +162,8 @@ body:hover .top-menu {
     flex-wrap: wrap;
     overflow: hidden;
     border-right: 2px solid #666;
+    word-wrap: break-word; /* Permite quebra de linha */
+    white-space: normal; /* Permite quebra de linha */
   }
 }
 
