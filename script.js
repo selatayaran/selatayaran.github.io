@@ -55,17 +55,17 @@ function updateDownloadButtons() {
 
     if (!langData.sections.contato.download || !downloadSection) return;
 
-    // Limpa todos os botões existentes na seção
-    downloadSection.innerHTML = '';
+        // Limpa todos os botões existentes na seção
+        downloadSection.innerHTML = '';
 
-    // Adiciona os botões traduzidos
-    const downloadItems = Object.values(langData.sections.contato.download);
-    downloadItems.forEach(item => {
-        const button = document.createElement('button');
-        button.innerText = item.name; // Nome traduzido
-        button.onclick = () => window.open(item.link, "_blank"); // Link correspondente
-        downloadSection.appendChild(button);
-    });
+        // Adiciona os botões traduzidos
+        const downloadItems = Object.values(langData.sections.contato.download);
+        downloadItems.forEach(item => {
+            const button = document.createElement('button');
+            button.innerText = item.name; // Nome traduzido
+            button.onclick = () => window.open(item.link, "_blank"); // Link correspondente
+            downloadSection.appendChild(button);
+        });
 }
 
 

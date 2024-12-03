@@ -1,9 +1,3 @@
-/* Reseta a margem e o padding de todos os elementos */
-* {
-  margin: 10;
-  box-sizing: border-box;
-}
-
 /* Estilo geral para o corpo */
 body {
   margin: 0;
@@ -46,6 +40,30 @@ body {
 /* Exibir o menu ao passar o mouse no topo */
 body:hover .top-menu {
   display: block;
+}
+
+/* Estilização Responsiva */
+@media (max-width: 768px) {
+
+  .menu-items {
+      display: none;
+      flex-direction: column;
+      background: #444;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+      font-size: 0.9em;
+  }
+
+  .menu-items li {
+      margin: 5px 0;
+  }
 }
 
 /* Seções do site */
@@ -113,8 +131,8 @@ body:hover .top-menu {
   flex-direction: row; /* Alinha texto e imagem lado a lado */
   justify-content: space-between;
   align-items: center;
-  gap: 20px; /* Espaçamento entre os elementos */
-  padding: 70px;
+  gap: 30px; /* Espaçamento entre os elementos */
+  padding: 80px;
 }
 
 #sobre h2 {

@@ -164,11 +164,11 @@
             "download": {
                 "curriculo": {
                 "name": "Download Resume",
-                "link": "doc/Curriculo_Portugal-PT.pdf"
+                "link": "doc/Resume_Portugal-EN.pdf"
                 },
                 "carta": {
                 "name": "Download Cover Letter",
-                "link": "doc/Carta_apresentacao.pdf"
+                "link": "doc/Cover_Letter.pdf"
                 }
             }
          },
