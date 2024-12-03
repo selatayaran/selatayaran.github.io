@@ -86,17 +86,16 @@ body:hover .top-menu {
   }
 
   .menu-items li {
-    margin: 5px 0;
+    margin: 5px 5px;
     text-align: center; /* Centraliza o texto dos itens */
   }
 
   /* Adiciona um estilo para os itens do menu para caberem melhor na tela */
   .menu-items li a {
     display: inline-block;
-    padding: 5px 10px; /* Ajuste o padding conforme necessário */
+    padding: 5px 5px; /* Ajuste o padding conforme necessário */
     text-decoration: none;
-    color: #000; /* Cor do texto */
-    border-radius: 5px; /* Adiciona bordas arredondadas */
+    color: #fff; /* Cor do texto */
     transition: background 0.3s ease;
   }
 
@@ -429,10 +428,10 @@ body:hover .top-menu {
 #habilidades {
   padding: 70px;
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
   width: 100%;
   gap: 20px;
+  flex: 1 1 calc(45% - 20px); 
 }
 
 #habilidades h2 {
@@ -449,19 +448,19 @@ body:hover .top-menu {
 
 /* Cartões de Categoria */
 .skill-card {
+  flex: 1 1 calc(45% - 20px); 
   border: 1px solid #ddd;
   border-radius: 8px;
-  padding: 20px;
+  padding: 30px;
   background: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  flex: 1 1 calc(45% - 20px); /* Ajusta o tamanho dos itens para caber lado a lado */
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  width: 100%;
-  max-width: 400px;
+  max-width: 300px;
   margin: auto;
   transition: transform 0.2s ease-in-out;
+  justify-content: space-between;
 }
 
 .skill-card h3 {
@@ -480,8 +479,8 @@ body:hover .top-menu {
 
 /* Itens de Habilidades */
 .skill-item {
-  flex: 1 1 calc(50% - 20px); /* Ajusta o tamanho dos itens para caber lado a lado */
-  min-width: 250px; /* Evita que fiquem muito pequenos */
+  flex: 1 1 calc(45% - 20px); 
+  min-width: 250px;
   display: flex;
   align-items: center;
   gap: 15px;
@@ -539,6 +538,14 @@ body:hover .top-menu {
   font-size: 2rem;
   margin-bottom: 30px;
   color: #232B2E;
+}
+
+/* Media query para telas menores */
+@media (max-width: 768px) {
+  .skill-card {
+    flex: 1 1 100%; /* Em telas menores, cada card ocupa a linha inteira */
+    max-width: 100%; /* Garante que o card não ultrapasse 100% da largura */
+  }
 }
 
 /* Grid de projetos */
