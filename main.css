@@ -4,7 +4,7 @@ body {
   padding: 0;
   overflow-y: scroll; /* Ativa o scroll vertical */
   scroll-snap-type: y mandatory; /* Faz o scroll 'pular' entre as seções */
-  font-family: Merriweather;
+  font-family: "Rosario";
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -42,6 +42,10 @@ body:hover .top-menu {
   display: block;
 }
 
+.top-menu li a:hover{
+  color: #506570;
+}
+
 /* Estilização Responsiva */
 @media (max-width: 768px) {
 
@@ -59,6 +63,17 @@ body:hover .top-menu {
 @media (max-width: 480px) {
   body {
       font-size: 0.9em;
+  }
+
+  .top-menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    background: rgba(114, 142, 150, 0.7);
+    padding: 0;
+    display: flex; /* Torna visível e responsivo */
+    z-index: 1000;
   }
 
   .menu-items li {
@@ -81,6 +96,11 @@ body:hover .top-menu {
 }
 
 /* Início (seção principal) */
+#inicio #inicio-title {
+  font-size: 3rem;
+}
+
+
 #inicio #typing-effect {
   font-family: monospace;
   font-size: 1.5rem;
@@ -89,6 +109,15 @@ body:hover .top-menu {
   overflow: hidden;
   border-right: 2px solid #666;
   animation: blink 0.5s step-end infinite alternate;
+}
+/* Animação do cursor piscante */
+@keyframes blink {
+  from {
+    border-right-color: #666;
+  }
+  to {
+    border-right-color: transparent;
+  }
 }
 
 /* Estilo do botão de idioma */
@@ -99,6 +128,7 @@ body:hover .top-menu {
 .language-switcher button {
   padding: 10px 20px;
   font-size: 1rem;
+  font-family: "Rosario";
   color: #fff;
   background-color: #728e96;
   border: none;
@@ -135,6 +165,17 @@ body:hover .top-menu {
   padding: 80px;
 }
 
+@media (max-width: 480px) {
+  #sobre {
+    display: flex;
+    flex-wrap: wrap; /* Permite que o conteúdo quebre em várias linhas */
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Espaçamento entre elementos */
+    padding: 40px;
+  }
+}
+
 #sobre h2 {
   font-size: 2rem;
   width: 100%;
@@ -157,15 +198,6 @@ body:hover .top-menu {
   object-fit: cover; 
 }
 
-/* Animação do cursor piscante */
-@keyframes blink {
-  from {
-    border-right-color: #666;
-  }
-  to {
-    border-right-color: transparent;
-  }
-}
 /* Seção Educação */
 #educacao {
   padding: 70px;
@@ -236,6 +268,8 @@ body:hover .top-menu {
   padding: 20px 0;
   margin: 0 auto;
   max-width: 800px;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Linha vertical */
@@ -338,6 +372,7 @@ body:hover .top-menu {
   padding: 70px;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   width: 100%;
   gap: 20px;
 }
@@ -361,8 +396,9 @@ body:hover .top-menu {
   padding: 20px;
   background: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex: 1 1 calc(45% - 20px); /* Ajusta o tamanho dos itens para caber lado a lado */
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 20px;
   width: 100%;
   max-width: 400px;
@@ -516,7 +552,7 @@ body:hover .top-menu {
   color: #232B2E;
 }
 
-.download-buttons button:hover {
+.contact-download button:hover {
   background-color: #506570;
 }
 
@@ -564,6 +600,7 @@ body:hover .top-menu {
   background-color: #728e96;
   border: none;
   font-size: 1rem;
+  font-family: "Rosario";
   color: #ffffff; /* Texto branco */
   border-radius: 10px; /* Deixa os botões com bordas arredondadas */
   cursor: pointer;
