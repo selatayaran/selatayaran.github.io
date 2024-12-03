@@ -110,6 +110,38 @@ body:hover .top-menu {
   border-right: 2px solid #666;
   animation: blink 0.5s step-end infinite alternate;
 }
+
+@media (max-width: 480px) {
+  .section {
+    position: relative;
+    z-index: 1; /* Garante que o conteúdo fique acima da imagem de fundo */
+    min-height: 100vh;
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: #232B2E;
+    text-align: left;
+  }
+  
+  /* Início (seção principal) */
+  #inicio #inicio-title {
+    font-size: 2rem;
+  }
+  
+  
+  #inicio #typing-effect {
+    font-family: monospace;
+    font-size: 1rem;
+    color: #666;
+    flex-wrap: wrap;
+    overflow: hidden;
+    border-right: 2px solid #666;
+  }
+}
+
+
 /* Animação do cursor piscante */
 @keyframes blink {
   from {
