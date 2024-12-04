@@ -137,24 +137,32 @@
         "botton": "Ver",
         "itens": [
           {
-            "title": "Simultaneous circulation and coinfection of Dengue clades and serotypes in Southern Brazil",
+            "title": "Circulação simultânea e coinfecção de clados e sorotipos de Dengue no Sul do Brasil",
             "link": "https://www.biorxiv.org/content/10.1101/2024.02.24.581892v1"
           },
           {
-            "title": "Molecular epidemiology of Western equine encephalitis virus in Brazil, 2023-2024",
+            "title": "Epidemiologia molecular do vírus da encefalite equina ocidental no Brasil, 2023-2024",
             "link": "https://doi.org/10.1101/2024.04.15.24305848"
           },
           {
-            "title": "Endemic transmission and international introduction of Monkeypox virus in Southern Brazil between 2022-2023",
+            "title": "Transmissão endêmica e introdução internacional do vírus da Monkeypox no Sul do Brasil entre 2022-2023",
             "link": "https://doi.org/10.1101/2024.06.22.24309232"
           },
           {
-            "title": "Development and validation of an all-in-one Bat-Clade genomic sequencing and host identification protocol",
+            "title": "Desenvolvimento e validação de um protocolo integrado para sequenciamento genômico de clados de morcegos e identificação do hospedeiro",
             "link": "https://doi.org/10.1101/2024.10.31.24316523"
           },
           {
-            "title": "Resurgence of human respiratory syncytial virus during COVID-19 pandemic in Southern Brazil",
+            "title": "Ressurgimento do vírus sincicial respiratório humano durante a pandemia de COVID-19 no Sul do Brasil",
             "link": "https://doi.org/10.1002/jmv.29551"
+          },
+          {
+            "title": "Projeto: Criação de identidade visual Dry Machado",
+            "link": "https://projetodrymachado.my.canva.site/"
+          },
+          {
+            "title": "Automatização da geração dos Anais dos Eventos Científicos",
+            "link": "https://github.com/selatayaran/anaiseventos"
           }
         ]
       },
