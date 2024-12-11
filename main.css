@@ -129,7 +129,7 @@ body:hover .top-menu {
   }
 
   .top-menu.menu-open {
-    display: block; /* Torna o menu visível quando aberto */
+    display: flex; /* Torna o menu visível quando aberto */
   }
 
   /* Botão de menu */
