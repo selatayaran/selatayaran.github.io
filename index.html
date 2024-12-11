@@ -10,6 +10,8 @@
 <body>
  <!-- Menu no topo que aparece ao passar o mouse -->
   <header class="main-header">
+    <!-- Botão Toggle do Menu -->
+    <button id="menu-toggle" aria-label="Toggle Menu" aria-expanded="false">☰</button>
     <nav class="top-menu">
       <ul>
           <li><a href="#inicio" id="menu-inicio"></a></li>
@@ -60,13 +62,14 @@
     </div>
 
     <!-- Seção Habilidades -->
-    <div class="section" id="habilidades"> 
+    <div class="section" id="habilidades">
       <h2 class="section-title">
         <img src="img/tecnicskills.png" alt="Habilidades Técnicas" class="icon">
         <span id="habilidades-title"></span>
       </h2>
+      <div class="skills-grid"></div> <!-- Contêiner para os cards -->
     </div>
-
+    
     <!-- Seção Projetos -->
     <div class="section" id="projetos">
       <h2 class="section-title" id="projetos-title"></h2>

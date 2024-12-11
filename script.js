@@ -3,18 +3,51 @@ let currentLanguage = 'pt'; // Definido como português inicialmente
 let languages = {}; // Vai armazenar as traduções carregadas
 let typingInterval = null;
 
-// Função para carregar o arquivo JSON correspondente
-async function loadLanguage(language) {
-    try {
-        const response = await fetch(`translations/${language}.json`);
-        if (!response.ok) throw new Error(`Erro HTTP: ${response.status}`);
-        
-        const data = await response.json();
-        languages[language] = data; // Armazenando os dados do idioma
-        currentLanguage = language;
-        updateContent(); // Atualiza o conteúdo com o idioma carregado
-    } catch (error) {
-        console.error('Erro ao carregar o arquivo JSON:', error);
+// Carrega todas as traduções ao carregar o site
+async function preloadTranslations() {
+    const languagesToLoad = ['pt', 'en']; // Lista de idiomas disponíveis
+    const promises = languagesToLoad.map(async (lang) => {
+        try {
+            const response = await fetch(`translations/${lang}.json`);
+            if (!response.ok) throw new Error(`Erro ao carregar ${lang}: ${response.status}`);
+            const data = await response.json();
+            languages[lang] = data; // Armazena as traduções
+        } catch (error) {
+            console.error(`Erro ao carregar o idioma ${lang}:`, error);
+        }
+    });
+
+    await Promise.all(promises); // Aguarda o carregamento de todos os idiomas
+    updateContent(); // Atualiza o conteúdo com o idioma padrão
+}
+
+function setupMobileMenuToggle() {
+    const menuToggle = document.getElementById("menu-toggle");
+    const menu = document.querySelector(".top-menu");
+    const menuLinks = document.querySelectorAll(".top-menu a");
+
+    if (menuToggle && menu) {
+        // Remove event listeners antigos (se existirem)
+        menuToggle.replaceWith(menuToggle.cloneNode(true));
+        menuLinks.forEach(link => link.replaceWith(link.cloneNode(true)));
+
+        // Reatribua os elementos após o clone
+        const newMenuToggle = document.getElementById("menu-toggle");
+        const newMenuLinks = document.querySelectorAll(".top-menu a");
+
+        // Adiciona eventos novamente ao botão de alternância do menu
+        newMenuToggle.addEventListener("click", () => {
+            const isMenuOpen = menu.classList.toggle("menu-open");
+            newMenuToggle.setAttribute("aria-expanded", isMenuOpen);
+        });
+
+        // Adiciona evento para fechar o menu ao clicar em um link
+        newMenuLinks.forEach((link) => {
+            link.addEventListener("click", () => {
+                menu.classList.remove("menu-open");
+                newMenuToggle.setAttribute("aria-expanded", "false");
+            });
+        });
     }
 }
 
@@ -68,14 +101,10 @@ function updateDownloadButtons() {
         });
 }
 
-
-// Carregar o idioma padrão (Português)
-loadLanguage('pt');
-
 // Função para trocar idioma e reiniciar o efeito de digitação
 function changeLanguage(language) {
     if (!languages[language]) {
-        loadLanguage(language); // Carrega o idioma se ainda não foi carregado
+        preloadTranslations(); // Carrega todos os idiomas
     } else {
         currentLanguage = language;
         updateContent(); // Atualiza o conteúdo imediatamente
@@ -94,6 +123,11 @@ function populateSkills(habilidades) {
         ${habilidades.title}
     `;
     section.appendChild(title);
+
+    // Cria o contêiner de grade
+    const skillsGrid = document.createElement('div');
+    skillsGrid.className = 'skills-grid';
+    section.appendChild(skillsGrid);
 
     const categories = habilidades.categories;
 
@@ -147,7 +181,7 @@ function populateSkills(habilidades) {
                 }
             }
             card.appendChild(skillsContainer);
-            section.appendChild(card);
+            skillsGrid.appendChild(card); // Adiciona o card à grade
         }
     }
 
@@ -194,6 +228,9 @@ function updateContent() {
             const menuElement = document.getElementById(`menu-${item}`);
             if (menuElement) menuElement.textContent = langData.menu[item];
         });
+
+        // Configura o menu mobile após atualizar o conteúdo
+        setupMobileMenuToggle();
 
         // Atualizando a seção "inicio"
         document.getElementById('inicio-title').textContent = langData.sections.inicio.name;
@@ -303,3 +340,9 @@ function updateContent() {
         console.error('Erro ao atualizar o conteúdo:', error);
     }
 }
+
+// Inicialização geral do script
+document.addEventListener("DOMContentLoaded", () => {
+    preloadTranslations();
+    updateContent();
+});
