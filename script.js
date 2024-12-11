@@ -229,9 +229,6 @@ function updateContent() {
             if (menuElement) menuElement.textContent = langData.menu[item];
         });
 
-        // Configura o menu mobile após atualizar o conteúdo
-        setupMobileMenuToggle();
-
         // Atualizando a seção "inicio"
         document.getElementById('inicio-title').textContent = langData.sections.inicio.name;
         document.getElementById('typing-effect').textContent = langData.sections.inicio.typing_effect;
@@ -345,4 +342,5 @@ function updateContent() {
 document.addEventListener("DOMContentLoaded", () => {
     preloadTranslations();
     updateContent();
+    setupMobileMenuToggle();
 });

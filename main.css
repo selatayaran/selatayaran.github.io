@@ -194,6 +194,7 @@ body:hover .top-menu {
     align-items: flex-start;
     color: #232B2E;
     text-align: left;
+    overflow-x: hidden;
   }
   
   /* Início (seção principal) */
@@ -332,7 +333,6 @@ body:hover .top-menu {
 
 .education-item {
   flex: 1 1 calc(45% - 20px); /* Ajusta o tamanho dos itens para caber lado a lado */
-  min-width: 250px; /* Evita que fiquem muito pequenos */
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -360,22 +360,33 @@ body:hover .top-menu {
 
 /* Design responsivo */
 @media (max-width: 768px) {
+  #educacao {
+    padding: 48px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
   .education-container {
     flex-direction: column;
     width: 100%; /* Ajusta para uma coluna em telas menores */
     max-width: 100%; /* Garante que o card não ultrapasse 100% da largura */
+    align-items: center;
   }
 
   .education-item {
     flex: 1 1 100%; /* Cada card ocupa toda a largura */
-    width: 100%;
+    max-width: 100%; 
   }
 }
 
 /* Linha do tempo */
 .timeline {
   position: relative;
-  padding: 24px 0;
+  padding: 24px 24px;
   margin: 0 auto;
   max-width: 800px;
   display: flex;
@@ -467,10 +478,11 @@ body:hover .top-menu {
     margin-bottom: 8px;
   }
 
+
   .timeline-content {
-    margin-left: 0;
-    margin-right: 0;
+    max-width: 100%;
   }
+  
 
   .timeline-item:nth-child(odd) {
     flex-direction: column;
@@ -605,8 +617,8 @@ body:hover .top-menu {
 /* Media query para telas médias */
 @media (max-width: 1024px) {
   .skill-card {
-    flex: 1 1 calc(50% - 24px); /* Dois cards por linha */
-    max-width: calc(50% - 24px);
+    flex: 1 1 calc(50% - 16px); /* Dois cards por linha */
+    max-width: calc(50% - 16px);
   }
 }
 
@@ -684,7 +696,7 @@ body:hover .top-menu {
 @media (max-width: 768px) {
 
   #projetos {
-    padding: 64px 64px;
+    padding: 56px 56px;
   }
 
   .projects-grid {
@@ -694,7 +706,7 @@ body:hover .top-menu {
 
 /* Seção Contato */
 #contato {
-  padding: 80px 80px;
+  padding: 64px 64px;
   text-align: left;
 }
 
