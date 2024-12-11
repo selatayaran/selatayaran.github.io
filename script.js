@@ -27,27 +27,21 @@ function setupMobileMenuToggle() {
     const menuLinks = document.querySelectorAll(".top-menu a");
 
     if (menuToggle && menu) {
-        // Remove event listeners antigos (se existirem)
-        menuToggle.replaceWith(menuToggle.cloneNode(true));
-        menuLinks.forEach(link => link.replaceWith(link.cloneNode(true)));
-
-        // Reatribua os elementos após o clone
-        const newMenuToggle = document.getElementById("menu-toggle");
-        const newMenuLinks = document.querySelectorAll(".top-menu a");
-
-        // Adiciona eventos novamente ao botão de alternância do menu
-        newMenuToggle.addEventListener("click", () => {
+        // Adiciona evento de clique ao botão de menu
+        menuToggle.addEventListener("click", () => {
             const isMenuOpen = menu.classList.toggle("menu-open");
-            newMenuToggle.setAttribute("aria-expanded", isMenuOpen);
+            menuToggle.setAttribute("aria-expanded", isMenuOpen); // Atualiza o estado
         });
 
-        // Adiciona evento para fechar o menu ao clicar em um link
-        newMenuLinks.forEach((link) => {
+        // Adiciona evento de clique aos links do menu
+        menuLinks.forEach((link) => {
             link.addEventListener("click", () => {
-                menu.classList.remove("menu-open");
-                newMenuToggle.setAttribute("aria-expanded", "false");
+                menu.classList.remove("menu-open"); // Fecha o menu
+                menuToggle.setAttribute("aria-expanded", "false"); // Atualiza o estado
             });
         });
+    } else {
+        console.error("Elementos do menu não encontrados!");
     }
 }
 
