@@ -27,18 +27,26 @@ function setupMobileMenuToggle() {
     const menuLinks = document.querySelectorAll(".top-menu a");
 
     if (menuToggle && menu) {
-        // Adiciona evento de clique ao botão de menu
-        menuToggle.addEventListener("click", () => {
+        // Função para alternar o menu
+        const toggleMenu = () => {
             const isMenuOpen = menu.classList.toggle("menu-open");
-            menuToggle.setAttribute("aria-expanded", isMenuOpen); // Atualiza o estado
-        });
+            menuToggle.setAttribute("aria-expanded", isMenuOpen);
+        };
 
-        // Adiciona evento de clique aos links do menu
+        // Função para fechar o menu
+        const closeMenu = () => {
+            menu.classList.remove("menu-open");
+            menuToggle.setAttribute("aria-expanded", "false");
+        };
+
+        // Adiciona eventos para clique e toque no botão
+        menuToggle.addEventListener("click", toggleMenu);
+        menuToggle.addEventListener("touchstart", toggleMenu);
+
+        // Adiciona eventos para clique e toque nos links do menu
         menuLinks.forEach((link) => {
-            link.addEventListener("click", () => {
-                menu.classList.remove("menu-open"); // Fecha o menu
-                menuToggle.setAttribute("aria-expanded", "false"); // Atualiza o estado
-            });
+            link.addEventListener("click", closeMenu);
+            link.addEventListener("touchstart", closeMenu);
         });
     } else {
         console.error("Elementos do menu não encontrados!");
