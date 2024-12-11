@@ -338,9 +338,12 @@ function updateContent() {
     }
 }
 
-// Inicialização geral do script
-document.addEventListener("DOMContentLoaded", () => {
-    preloadTranslations();
-    updateContent();
-    setupMobileMenuToggle();
+document.addEventListener("DOMContentLoaded", async () => {
+    try {
+        await preloadTranslations(); // Aguarda o carregamento das traduções
+        updateContent(); // Atualiza o conteúdo com o idioma padrão
+        setupMobileMenuToggle(); // Configura o menu mobile
+    } catch (error) {
+        console.error("Erro durante a inicialização:", error);
+    }
 });
