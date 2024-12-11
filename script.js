@@ -24,29 +24,29 @@ async function preloadTranslations() {
 function setupMobileMenuToggle() {
     const menuToggle = document.getElementById("menu-toggle");
     const menu = document.querySelector(".top-menu");
-    const menuLinks = document.querySelectorAll(".top-menu a");
 
     if (menuToggle && menu) {
-        // Função para alternar o menu
-        const toggleMenu = () => {
+        // Alterna o menu ao clicar no botão
+        menuToggle.addEventListener("click", (event) => {
+            event.stopPropagation(); // Evita propagação do evento
             const isMenuOpen = menu.classList.toggle("menu-open");
             menuToggle.setAttribute("aria-expanded", isMenuOpen);
-        };
+        });
 
-        // Função para fechar o menu
-        const closeMenu = () => {
-            menu.classList.remove("menu-open");
-            menuToggle.setAttribute("aria-expanded", "false");
-        };
+        // Fecha o menu ao clicar fora dele
+        document.addEventListener("click", (event) => {
+            if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
+                menu.classList.remove("menu-open");
+                menuToggle.setAttribute("aria-expanded", "false");
+            }
+        });
 
-        // Adiciona eventos para clique e toque no botão
-        menuToggle.addEventListener("click", toggleMenu);
-        menuToggle.addEventListener("touchstart", toggleMenu);
-
-        // Adiciona eventos para clique e toque nos links do menu
-        menuLinks.forEach((link) => {
-            link.addEventListener("click", closeMenu);
-            link.addEventListener("touchstart", closeMenu);
+        // Fecha o menu ao clicar em um link dentro do menu
+        menu.addEventListener("click", (event) => {
+            if (event.target.tagName === "A") { // Verifica se o clique foi em um link
+                menu.classList.remove("menu-open");
+                menuToggle.setAttribute("aria-expanded", "false");
+            }
         });
     } else {
         console.error("Elementos do menu não encontrados!");
