@@ -107,6 +107,9 @@ body:hover .top-menu {
     z-index: 1000;
     padding: 8px;
     transition: all 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform: translateY(-100%);
+    opacity: 0;
   }
 
   .top-menu ul {
@@ -130,6 +133,8 @@ body:hover .top-menu {
 
   .top-menu.menu-open {
     display: flex; /* Torna o menu visível quando aberto */
+    transform: translateY(0);
+    opacity: 1;
   }
 
   /* Botão de menu */

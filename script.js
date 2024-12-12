@@ -26,32 +26,44 @@ function setupMobileMenuToggle() {
     const menu = document.querySelector(".top-menu");
 
     if (menuToggle && menu) {
-        // Alterna o menu ao clicar no botão
-        menuToggle.addEventListener("click", (event) => {
-            event.stopPropagation(); // Evita propagação do evento
+        // Alterna o menu ao clicar ou tocar no botão
+        const toggleMenu = (event) => {
+            event.stopPropagation();
             const isMenuOpen = menu.classList.toggle("menu-open");
             menuToggle.setAttribute("aria-expanded", isMenuOpen);
-        });
+            console.log(isMenuOpen ? "Menu aberto" : "Menu fechado");
+        };
 
-        // Fecha o menu ao clicar fora dele
-        document.addEventListener("click", (event) => {
-            if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
+        // Fecha o menu ao clicar fora
+        const closeMenu = (event) => {
+            const clickedElement = event.target;
+
+            // Evita fechar se o clique for no botão ou dentro do menu
+            if (!menu.contains(clickedElement) && !menuToggle.contains(clickedElement)) {
                 menu.classList.remove("menu-open");
                 menuToggle.setAttribute("aria-expanded", "false");
+                console.log("Menu fechado por clique fora");
             }
-        });
+        };
 
-        // Fecha o menu ao clicar em um link dentro do menu
-        menu.addEventListener("click", (event) => {
-            if (event.target.tagName === "A") { // Verifica se o clique foi em um link
+        // Fecha o menu ao clicar em links dentro dele
+        const menuLinkClick = (event) => {
+            if (event.target.tagName === "A") {
                 menu.classList.remove("menu-open");
                 menuToggle.setAttribute("aria-expanded", "false");
+                console.log("Menu fechado ao clicar em um link");
             }
-        });
+        };
+
+        // Adiciona eventos
+        menuToggle.addEventListener("pointerdown", toggleMenu);
+        document.addEventListener("pointerdown", closeMenu);
+        menu.addEventListener("pointerdown", menuLinkClick);
     } else {
         console.error("Elementos do menu não encontrados!");
     }
 }
+
 
 // Função de efeito de digitação
 function typeEffect() {
