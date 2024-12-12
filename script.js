@@ -46,32 +46,31 @@ function setupMobileMenuToggle() {
             }
         };
 
-        // Fecha o menu ao clicar em links dentro dele
-        const menuLinkClick = (event) => {
-            if (event.target.tagName === "A") {
-                menu.classList.remove("menu-open");
-                menuToggle.setAttribute("aria-expanded", "false");
-                console.log("Menu fechado ao clicar em um link");
-            }
-        };
-
+        // Fecha o menu e rola para a seção correta ao clicar em um link
         menu.addEventListener("pointerdown", (event) => {
-            // Verifica se o clique foi em um link dentro do menu
             if (event.target.tagName === "A") {
+                event.preventDefault(); // Impede o comportamento padrão de navegação
+                const href = event.target.getAttribute("href");
+                const targetSection = document.querySelector(href);
+
+                if (targetSection) {
+                    // Rola suavemente para a seção correspondente
+                    targetSection.scrollIntoView({ behavior: "smooth" });
+                    console.log("Rolando para a seção:", href);
+                } else {
+                    console.warn("Seção não encontrada para o link:", href);
+                }
+
                 // Fecha o menu
                 menu.classList.remove("menu-open");
                 menuToggle.setAttribute("aria-expanded", "false");
-        
-                // Permite a navegação padrão
-                console.log("Menu fechado ao clicar em um link:", event.target.getAttribute("href"));
+                console.log("Menu fechado ao clicar em um link:", href);
             }
         });
-        
 
         // Adiciona eventos
         menuToggle.addEventListener("pointerdown", toggleMenu);
         document.addEventListener("pointerdown", closeMenu);
-        menu.addEventListener("pointerdown", menuLinkClick);
     } else {
         console.error("Elementos do menu não encontrados!");
     }
