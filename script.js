@@ -55,6 +55,19 @@ function setupMobileMenuToggle() {
             }
         };
 
+        menu.addEventListener("pointerdown", (event) => {
+            // Verifica se o clique foi em um link dentro do menu
+            if (event.target.tagName === "A") {
+                // Fecha o menu
+                menu.classList.remove("menu-open");
+                menuToggle.setAttribute("aria-expanded", "false");
+        
+                // Permite a navegação padrão
+                console.log("Menu fechado ao clicar em um link:", event.target.getAttribute("href"));
+            }
+        });
+        
+
         // Adiciona eventos
         menuToggle.addEventListener("pointerdown", toggleMenu);
         document.addEventListener("pointerdown", closeMenu);
