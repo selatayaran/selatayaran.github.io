@@ -58,7 +58,7 @@
             {
             "course": "English",
             "institution": "College English School - Flores da Cunha",
-            "mode": "Level - B1 (Minimum independent)",
+            "mode": "Level - B2 (Independent user)",
             "start": "2018",
             "end": "2021"
             }
@@ -172,7 +172,7 @@
             "download": {
                 "curriculo": {
                 "name": "Download Resume",
-                "link": "doc/Resume_Portugal-EN.pdf"
+                "link": "doc/Resume_EN.pdf"
                 },
                 "carta": {
                 "name": "Download Cover Letter",

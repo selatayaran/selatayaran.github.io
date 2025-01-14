@@ -57,7 +57,7 @@
           {
             "course": "Inglês",
             "institution": "College English School - Flores da Cunha",
-            "mode": "Nível - B1 (Independente mínimo)",
+            "mode": "Nível - B2 (Intermediário avançado)",
             "start": "2018",
             "end": "2021"
           }
@@ -171,7 +171,7 @@
       "download": {
         "curriculo": {
           "name": "Baixar Currículo",
-          "link": "doc/Curriculo_Portugal-PT.pdf"
+          "link": "doc/CV_PT.pdf"
         },
         "carta": {
           "name": "Baixar Carta de Apresentação",
